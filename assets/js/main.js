@@ -1,0 +1,1 @@
+// Small site script placeholder.

@@ -1,0 +1,7 @@
+title: The Invariant
+description: Thoughts on science, technology, and ideas.
+url: "https://the-invariant.github.io"
+baseurl: ""
+markdown: rdiscount
+permalink: /blog/:year/:month/:day/:title/
+pygments: true
