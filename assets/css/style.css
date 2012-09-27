@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: #eeeeee;
+  background: #e9e7df;
   color: #222222;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.58;
 }
 
 a {
@@ -18,23 +18,25 @@ a:hover {
 }
 
 #wrap {
-  width: 720px;
-  margin: 30px auto;
-  padding: 0 30px;
+  width: 960px;
+  margin: 26px auto;
+  padding: 0;
   background: #ffffff;
-  border: 1px solid #d7d7d7;
+  border: 1px solid #cfcbbf;
 }
 
 #header {
-  padding: 22px 0 14px;
-  border-bottom: 1px solid #dddddd;
+  padding: 28px 30px 0;
+  border-bottom: 1px solid #cfcfcf;
+  text-align: center;
 }
 
 .site-title {
-  margin: 0 0 9px;
+  margin: 0 0 18px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 28px;
+  font-size: 42px;
   line-height: 1.2;
+  letter-spacing: 0;
 }
 
 .site-title a {
@@ -44,31 +46,92 @@ a:hover {
 
 #nav {
   margin: 0;
-  padding: 0;
+  padding: 9px 0 10px;
+  border-top: 1px solid #d8d8d8;
   list-style: none;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 #nav li {
   display: inline;
-  margin-right: 16px;
+  margin: 0 12px;
 }
 
 #night-toggle {
   margin: 0;
-  padding: 1px 6px;
-  border: 1px solid #bdbdbd;
-  background: #f5f5f5;
-  color: #333333;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0645ad;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
+#night-toggle:hover {
+  text-decoration: underline;
+}
+
+#main {
+  padding: 30px;
+}
+
+#main:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 #content {
-  padding: 30px 0 36px;
+  float: left;
+  width: 620px;
+  padding: 0 28px 0 0;
+  border-right: 1px solid #e2e2e2;
+}
+
+#sidebar {
+  float: right;
+  width: 250px;
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.side-section {
+  margin: 0 0 24px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.side-section h2 {
+  margin: 0 0 9px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #eeeeee;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.side-section p {
+  margin: 0 0 10px;
+}
+
+.side-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-section li {
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #eeeeee;
 }
 
 h1,
@@ -80,8 +143,8 @@ h3 {
 }
 
 h1 {
-  margin: 0 0 14px;
-  font-size: 32px;
+  margin: 0 0 16px;
+  font-size: 34px;
 }
 
 h2 {
@@ -107,7 +170,7 @@ p {
 }
 
 .post-list li {
-  padding: 7px 0;
+  padding: 9px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -126,7 +189,8 @@ p {
 }
 
 #footer {
-  padding: 18px 0 24px;
+  clear: both;
+  padding: 18px 30px 24px;
   border-top: 1px solid #dddddd;
   color: #666666;
   font-family: Helvetica, Arial, sans-serif;
@@ -156,6 +220,11 @@ body.night .site-title a {
 }
 
 body.night #header,
+body.night #nav,
+body.night #content,
+body.night .side-section,
+body.night .side-section h2,
+body.night .side-section li,
 body.night #footer,
 body.night h2,
 body.night .post .back,
@@ -164,24 +233,51 @@ body.night .post-list li {
 }
 
 body.night .tagline,
+body.night #sidebar,
 body.night .post-list .date,
 body.night .post .date,
 body.night #footer {
   color: #bbbbbb;
 }
 
-body.night #night-toggle {
-  border-color: #777777;
-  background: #333333;
-  color: #eeeeee;
+body.night .side-section h2 {
+  color: #dddddd;
 }
 
-@media screen and (max-width: 780px) {
+body.night #night-toggle {
+  color: #9db7e8;
+}
+
+@media screen and (max-width: 980px) {
   #wrap {
     width: auto;
     margin: 0;
     padding: 0 18px;
     border-left: 0;
     border-right: 0;
+  }
+
+  #header,
+  #main,
+  #footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #content,
+  #sidebar {
+    float: none;
+    width: auto;
+  }
+
+  #content {
+    padding: 0;
+    border-right: 0;
+  }
+
+  #sidebar {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e2e2;
   }
 }

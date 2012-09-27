@@ -1,0 +1,19 @@
+<div id="sidebar">
+  <div class="side-section">
+    <h2>{{ site.title }}</h2>
+    <p>{{ site.description }}</p>
+  </div>
+
+  <div class="side-section">
+    <h2>Recent posts</h2>
+    {% if site.posts.size > 0 %}
+    <ul>
+      {% for post in site.posts limit:5 %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts yet.</p>
+    {% endif %}
+  </div>
+</div>

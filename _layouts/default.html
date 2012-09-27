@@ -14,8 +14,12 @@
   <div id="wrap">
     {% include header.html %}
 
-    <div id="content">
-      {{ content }}
+    <div id="main">
+      <div id="content">
+        {{ content }}
+      </div>
+
+      {% include sidebar.html %}
     </div>
 
     {% include footer.html %}
