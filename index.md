@@ -16,6 +16,7 @@ title: Home
   <li>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <div class="excerpt">{{ post.excerpt }}</div>
   </li>
   {% endfor %}
 </ul>

@@ -1,15 +1,28 @@
 <div id="sidebar">
   <div class="side-section">
-    <h2>{{ site.title }}</h2>
+    <h2>About</h2>
     <p>{{ site.description }}</p>
   </div>
 
   <div class="side-section">
-    <h2>Recent posts</h2>
+    <h2>Recent Posts</h2>
     {% if site.posts.size > 0 %}
     <ul>
       {% for post in site.posts limit:5 %}
       <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts yet.</p>
+    {% endif %}
+  </div>
+
+  <div class="side-section">
+    <h2>Archive</h2>
+    {% if site.posts.size > 0 %}
+    <ul>
+      {% for post in site.posts %}
+      <li><span class="side-date">{{ post.date | date: "%b %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
     {% else %}
