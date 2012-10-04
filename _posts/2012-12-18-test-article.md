@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test Article
-date: 2012-09-27
+date: 2012-12-18
 description: Placeholder content used for layout testing.
 image: /assets/images/posts/test.jpg
 ---

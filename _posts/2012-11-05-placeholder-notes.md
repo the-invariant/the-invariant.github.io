@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Placeholder Notes
-date: 2012-09-27
+date: 2012-11-05
 description: Placeholder content used for layout testing.
 image: /assets/images/posts/placeholder.jpg
 ---

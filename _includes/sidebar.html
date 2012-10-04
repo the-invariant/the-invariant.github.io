@@ -7,9 +7,15 @@
   <div class="side-section">
     <h2>Recent Posts</h2>
     {% if site.posts.size > 0 %}
-    <ul>
-      {% for post in site.posts limit:5 %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    <ul class="recent-posts">
+      {% for post in site.posts limit:3 %}
+      <li>
+        {% if post.image %}
+        <a class="side-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+        {% endif %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <span class="side-date">{{ post.date | date: "%b %Y" }}</span>
+      </li>
       {% endfor %}
     </ul>
     {% else %}
@@ -20,9 +26,13 @@
   <div class="side-section">
     <h2>Archive</h2>
     {% if site.posts.size > 0 %}
-    <ul>
+    <ul class="archive-months">
       {% for post in site.posts %}
-      <li><span class="side-date">{{ post.date | date: "%b %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+      {% if this_month != last_month %}
+      <li><a href="{{ site.baseurl }}/archive/">{{ this_month }}</a></li>
+      {% assign last_month = this_month %}
+      {% endif %}
       {% endfor %}
     </ul>
     {% else %}

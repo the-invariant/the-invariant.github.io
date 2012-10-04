@@ -26,9 +26,18 @@ a:hover {
 }
 
 #header {
+  position: relative;
   padding: 28px 30px 0;
   border-bottom: 1px solid #cfcfcf;
   text-align: center;
+}
+
+#header-utility {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .site-title {
@@ -68,7 +77,6 @@ a:hover {
   color: #0645ad;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -130,8 +138,37 @@ a:hover {
 
 .side-section li {
   margin: 0;
-  padding: 5px 0;
+  padding: 7px 0;
   border-bottom: 1px solid #eeeeee;
+}
+
+.recent-posts li {
+  min-height: 48px;
+}
+
+.side-thumb {
+  float: left;
+  margin: 0 9px 6px 0;
+  padding: 2px;
+  border: 1px solid #dddddd;
+  background: #f8f8f8;
+}
+
+.side-thumb img {
+  display: block;
+  width: 54px;
+  height: 38px;
+  border: 0;
+}
+
+.side-section .side-date {
+  display: block;
+  margin-top: 2px;
+}
+
+.archive-months li {
+  min-height: 0;
+  padding: 5px 0;
 }
 
 h1,
@@ -170,8 +207,24 @@ p {
 }
 
 .post-list li {
+  min-height: 78px;
   padding: 9px 0;
   border-bottom: 1px solid #eeeeee;
+}
+
+.post-thumb {
+  float: left;
+  margin: 3px 12px 8px 0;
+  padding: 3px;
+  border: 1px solid #dddddd;
+  background: #f8f8f8;
+}
+
+.post-thumb img {
+  display: block;
+  width: 96px;
+  height: 62px;
+  border: 0;
 }
 
 .post-list .excerpt {
@@ -259,6 +312,8 @@ body.night #content,
 body.night .side-section,
 body.night .side-section h2,
 body.night .side-section li,
+body.night .side-thumb,
+body.night .post-thumb,
 body.night #footer,
 body.night h2,
 body.night .post .back,
@@ -279,6 +334,11 @@ body.night #footer {
 
 body.night .post-image {
   border-color: #555555;
+  background: #242424;
+}
+
+body.night .side-thumb,
+body.night .post-thumb {
   background: #242424;
 }
 
@@ -321,5 +381,10 @@ body.night #night-toggle {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #e2e2e2;
+  }
+
+  #header-utility {
+    position: static;
+    margin-bottom: 8px;
   }
 }

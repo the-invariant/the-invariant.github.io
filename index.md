@@ -14,6 +14,9 @@ title: Home
 <ul class="post-list">
   {% for post in site.posts limit:5 %}
   <li>
+    {% if post.image %}
+    <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+    {% endif %}
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     <div class="excerpt">{{ post.excerpt }}</div>
