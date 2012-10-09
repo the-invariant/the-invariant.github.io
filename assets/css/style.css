@@ -41,7 +41,7 @@ a:hover {
 }
 
 .site-title {
-  margin: 0 0 18px;
+  margin: 0 0 7px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 42px;
   line-height: 1.2;
@@ -51,6 +51,13 @@ a:hover {
 .site-title a {
   color: #222222;
   text-decoration: none;
+}
+
+.masthead-tagline {
+  margin: 0 0 20px;
+  color: #555555;
+  font-size: 16px;
+  font-style: italic;
 }
 
 #nav {
@@ -200,6 +207,35 @@ p {
   font-style: italic;
 }
 
+.feature-panel {
+  margin: 0 0 30px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.feature-panel h1 {
+  margin: 0 0 10px;
+  font-size: 27px;
+}
+
+.feature-panel p {
+  font-size: 17px;
+}
+
+.feature-image {
+  margin: 0 0 18px;
+  padding: 6px;
+  border: 1px solid #dddddd;
+  background: #f8f8f8;
+}
+
+.feature-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
 .post-list {
   margin: 0;
   padding: 0;
@@ -275,6 +311,33 @@ p {
   font-size: 12px;
 }
 
+.archive-year {
+  margin: 0 0 18px;
+  padding: 0 0 7px;
+  border-bottom: 2px solid #d8d8d8;
+  font-size: 26px;
+}
+
+.archive-month {
+  margin: 24px 0 6px;
+  padding: 0;
+  border-bottom: 0;
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.archive-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
 #footer {
   clear: both;
   padding: 18px 30px 24px;
@@ -317,11 +380,16 @@ body.night .post-thumb,
 body.night #footer,
 body.night h2,
 body.night .post .back,
-body.night .post-list li {
+body.night .post-list li,
+body.night .feature-panel,
+body.night .feature-image,
+body.night .archive-year,
+body.night .archive-list li {
   border-color: #555555;
 }
 
 body.night .tagline,
+body.night .masthead-tagline,
 body.night #sidebar,
 body.night .post .description,
 body.night .post-list .excerpt,
@@ -337,12 +405,17 @@ body.night .post-image {
   background: #242424;
 }
 
+body.night .feature-image {
+  background: #242424;
+}
+
 body.night .side-thumb,
 body.night .post-thumb {
   background: #242424;
 }
 
-body.night .side-section h2 {
+body.night .side-section h2,
+body.night .archive-month {
   color: #dddddd;
 }
 

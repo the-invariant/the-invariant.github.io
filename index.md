@@ -3,10 +3,11 @@ layout: default
 title: Home
 ---
 
-# The Invariant
-
-<p class="tagline">Thoughts on science, technology, and ideas.</p>
-
+<div class="feature-panel">
+  <p class="feature-image"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
+  <h1>Notes from the edge of science and technology.</h1>
+  <p>A small notebook on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+</div>
 
 ## Recent posts
 
