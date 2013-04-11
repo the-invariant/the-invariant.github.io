@@ -5,8 +5,11 @@ title: Home
 
 <div class="feature-panel">
   <p class="feature-image"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
-  <h1>Notes from the edge of science and technology.</h1>
-  <p>A small notebook on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+  <div class="feature-copy">
+    <h1>Notes from the edge of science and technology.</h1>
+    <p>Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+       
+  </div>
 </div>
 
 ## Recent posts
@@ -18,8 +21,8 @@ title: Home
     {% if post.image %}
     <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
     {% endif %}
+    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     <div class="excerpt">{{ post.excerpt }}</div>
   </li>
   {% endfor %}

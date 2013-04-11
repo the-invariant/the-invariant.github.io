@@ -4,6 +4,14 @@
     <p>{{ site.description }}</p>
   </div>
 
+  <div class="side-section side-search">
+    <h2>Search</h2>
+    <div class="search-box">
+      <input type="text" name="q">
+      <button type="button" disabled="disabled">Search</button>
+    </div>
+  </div>
+
   <div class="side-section">
     <h2>Recent Posts</h2>
     {% if site.posts.size > 0 %}
