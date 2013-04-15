@@ -1,22 +1,14 @@
 ---
 layout: default
-title: Home
+title: Blog
+permalink: /blog/
 ---
 
-<div class="feature-panel">
-  <p class="feature-image"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
-  <div class="feature-copy">
-    <h1>Notes from the edge of science and technology.</h1>
-    <p>Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
-       
-  </div>
-</div>
-
-## Recent posts
+# Blog
 
 {% if site.posts.size > 0 %}
-<ul class="post-list">
-  {% for post in site.posts limit:4 %}
+<ul class="post-list blog-list">
+  {% for post in site.posts limit:9 %}
   <li>
     {% if post.image %}
     <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
@@ -24,6 +16,7 @@ title: Home
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <div class="excerpt">{{ post.excerpt }}</div>
+    <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
   </li>
   {% endfor %}
 </ul>

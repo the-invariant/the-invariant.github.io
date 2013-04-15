@@ -338,6 +338,16 @@ p {
   margin: 0;
 }
 
+.blog-list li {
+  min-height: 96px;
+}
+
+.read-more {
+  margin: 8px 0 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
 .post-list .date,
 .post .date {
   color: #777777;
