@@ -277,9 +277,9 @@ p {
 }
 
 .feature-image {
-  float: right;
-  width: 260px;
-  margin: 0 0 12px 24px;
+  float: none;
+  width: auto;
+  margin: 0 0 18px;
   padding: 6px;
   border: 1px solid #dddddd;
   background: #f8f8f8;
@@ -293,7 +293,7 @@ p {
 }
 
 .feature-copy {
-  min-height: 170px;
+  min-height: 0;
 }
 
 .post-list {
