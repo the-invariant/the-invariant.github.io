@@ -87,7 +87,7 @@ a:hover {
 
 #nav a {
   display: inline-block;
-  padding: 10px 16px 9px;
+  padding: 10px 14px 9px;
   border-left: 1px solid #e3e3e3;
 }
 
@@ -381,6 +381,13 @@ p {
   font-style: italic;
 }
 
+.post-tags {
+  margin: -8px 0 20px;
+  color: #666666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
 .post-image {
   margin: 0 0 24px;
   padding: 6px;
@@ -433,6 +440,49 @@ p {
 .archive-list li {
   padding: 7px 0;
   border-bottom: 1px solid #eeeeee;
+}
+
+.topics-index h2 {
+  margin-top: 26px;
+  text-transform: capitalize;
+}
+
+.topics-index ul {
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.topics-index li {
+  padding: 7px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+pre,
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
+pre {
+  margin: 0 0 18px;
+  padding: 10px;
+  overflow-x: auto;
+  border: 1px solid #d8d8d8;
+  background: #f5f5f5;
+  line-height: 1.45;
+}
+
+code {
+  padding: 1px 3px;
+  border: 1px solid #e1e1e1;
+  background: #f7f7f7;
+}
+
+pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 #footer {
@@ -493,6 +543,7 @@ body.night .tagline,
 body.night .masthead-tagline,
 body.night #sidebar,
 body.night .post .description,
+body.night .post-tags,
 body.night .post-list .excerpt,
 body.night .side-date,
 body.night .post-list .date,
@@ -523,13 +574,23 @@ body.night .archive-month {
 body.night #nav-wrap,
 body.night #nav a:hover,
 body.night .search-box input,
-body.night .search-box button {
+body.night .search-box button,
+body.night pre,
+body.night code {
   background: #242424;
 }
 
 body.night .search-box input,
-body.night .search-box button {
+body.night .search-box button,
+body.night pre,
+body.night code {
   color: #bbbbbb;
+}
+
+body.night pre,
+body.night code,
+body.night .topics-index li {
+  border-color: #555555;
 }
 
 body.night #night-toggle {
