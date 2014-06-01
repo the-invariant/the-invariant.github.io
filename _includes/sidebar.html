@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div id="sidebar" class="col-sm-4 col-md-4">
   <div class="side-section">
     <h2>About</h2>
     <p>{{ site.description }}</p>
@@ -10,11 +10,16 @@
     <p><a href="{{ site.baseurl }}/topics/">Topics</a></p>
   </div>
 
+  <div class="side-section">
+    <h2>Notebooks</h2>
+    <p><a href="{{ site.baseurl }}/notebooks/">Notebooks</a></p>
+  </div>
+
   <div class="side-section side-search">
     <h2>Search</h2>
     <div class="search-box">
-      <input type="text" name="q">
-      <button type="button" disabled="disabled">Search</button>
+      <input class="form-control" type="text" name="q">
+      <button class="btn btn-default" type="button" disabled="disabled">Search</button>
     </div>
   </div>
 

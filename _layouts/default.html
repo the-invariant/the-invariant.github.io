@@ -8,14 +8,15 @@
   {% elsif site.description %}
   <meta name="description" content="{{ site.description }}">
   {% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-3.1.1.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
-  <div id="wrap">
+  <div id="wrap" class="container">
     {% include header.html %}
 
-    <div id="main">
-      <div id="content">
+    <div id="main" class="row">
+      <div id="content" class="col-sm-8 col-md-8">
         {{ content }}
       </div>
 

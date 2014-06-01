@@ -87,7 +87,7 @@ a:hover {
 
 #nav a {
   display: inline-block;
-  padding: 10px 14px 9px;
+  padding: 10px 12px 9px;
   border-left: 1px solid #e3e3e3;
 }
 
@@ -128,13 +128,15 @@ a:hover {
 #content {
   float: left;
   width: 635px;
-  padding: 0 28px 0 0;
+  padding: 0 28px 0 15px;
   border-right: 1px solid #e2e2e2;
 }
 
 #sidebar {
   float: right;
   width: 255px;
+  padding-right: 15px;
+  padding-left: 15px;
   color: #555555;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -197,7 +199,8 @@ a:hover {
 }
 
 .search-box input {
-  width: 154px;
+  float: left;
+  width: 156px;
   margin: 0;
   padding: 4px;
   border: 1px solid #cfcfcf;
@@ -206,13 +209,20 @@ a:hover {
 }
 
 .search-box button {
-  margin: 0 0 0 4px;
+  float: left;
+  margin: 0 0 0 5px;
   padding: 4px 7px;
   border: 1px solid #bdbdbd;
   background: #eeeeee;
   color: #555555;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
+}
+
+.search-box:after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
 .side-section .side-date {
@@ -348,6 +358,14 @@ p {
   font-size: 13px;
 }
 
+.read-more .btn,
+.post .back .btn {
+  padding: 4px 8px;
+  color: #333333;
+  border-color: #cccccc;
+  background: #f7f7f7;
+}
+
 .post-list .date,
 .post .date {
   color: #777777;
@@ -458,6 +476,13 @@ p {
   border-bottom: 1px solid #eeeeee;
 }
 
+.notebook-note {
+  margin: 0 0 22px;
+  padding: 12px 14px;
+  border: 1px solid #dddddd;
+  background: #f8f8f8;
+}
+
 pre,
 code {
   font-family: Consolas, "Courier New", monospace;
@@ -535,7 +560,10 @@ body.night .archive-year,
 body.night .archive-list li,
 body.night .post-head,
 body.night .search-box input,
-body.night .search-box button {
+body.night .search-box button,
+body.night .notebook-note,
+body.night .read-more .btn,
+body.night .post .back .btn {
   border-color: #555555;
 }
 
@@ -575,6 +603,9 @@ body.night #nav-wrap,
 body.night #nav a:hover,
 body.night .search-box input,
 body.night .search-box button,
+body.night .notebook-note,
+body.night .read-more .btn,
+body.night .post .back .btn,
 body.night pre,
 body.night code {
   background: #242424;
@@ -582,6 +613,8 @@ body.night code {
 
 body.night .search-box input,
 body.night .search-box button,
+body.night .read-more .btn,
+body.night .post .back .btn,
 body.night pre,
 body.night code {
   color: #bbbbbb;
