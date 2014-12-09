@@ -25,10 +25,10 @@ permalink: /archive/
 </ul>
   {% endif %}
   <h3 class="archive-month">{{ this_month }}</h3>
-<ul class="archive-list">
+<ul class="archive-list list-group">
   {% assign last_month = this_month %}
   {% endif %}
-  <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  <li class="list-group-item"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 {% else %}

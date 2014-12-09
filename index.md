@@ -3,12 +3,14 @@ layout: default
 title: Home
 ---
 
-<div class="feature-panel">
-  <p class="feature-image"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
+<div class="feature-panel panel panel-default">
+  <div class="panel-body">
+  <p class="feature-image thumbnail"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
   <div class="feature-copy">
     <h1>Notes from the edge of science and technology.</h1>
-    <p>Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+    <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
        
+  </div>
   </div>
 </div>
 
@@ -19,7 +21,7 @@ title: Home
   {% for post in site.posts limit:4 %}
   <li>
     {% if post.image %}
-    <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+    <a class="post-thumb thumbnail" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
     {% endif %}
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>

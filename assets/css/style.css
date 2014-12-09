@@ -71,6 +71,7 @@ a:hover {
 }
 
 #nav {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -144,19 +145,27 @@ a:hover {
 }
 
 .side-section {
-  margin: 0 0 22px;
-  padding: 0 0 16px;
-  border-bottom: 1px solid #e2e2e2;
+  margin: 0 0 18px;
+  padding: 0;
+  border-bottom: 0;
 }
 
 .side-section h2 {
-  margin: 0 0 10px;
-  padding: 0 0 6px;
-  border-bottom: 1px solid #eeeeee;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
   color: #333333;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.side-section .panel-heading {
+  border-bottom: 1px solid #dddddd;
+}
+
+.side-section .panel-body {
+  font-size: 13px;
 }
 
 .side-section p {
@@ -171,8 +180,8 @@ a:hover {
 
 .side-section li {
   margin: 0;
-  padding: 8px 0;
-  border-bottom: 1px solid #eeeeee;
+  padding: 8px 12px;
+  border-bottom: 0;
 }
 
 .recent-posts li {
@@ -182,9 +191,7 @@ a:hover {
 .side-thumb {
   float: left;
   margin: 0 10px 7px 0;
-  padding: 2px;
-  border: 1px solid #dddddd;
-  background: #f8f8f8;
+  padding: 3px;
 }
 
 .side-thumb img {
@@ -232,7 +239,7 @@ a:hover {
 
 .archive-months li {
   min-height: 0;
-  padding: 5px 0;
+  padding: 6px 12px;
 }
 
 h1,
@@ -266,8 +273,9 @@ p {
 
 .feature-panel {
   margin: 0 0 32px;
-  padding: 0 0 24px;
-  border-bottom: 1px solid #e3e3e3;
+  padding: 0;
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff;
 }
 
 .feature-panel:after {
@@ -290,9 +298,6 @@ p {
   float: none;
   width: auto;
   margin: 0 0 18px;
-  padding: 6px;
-  border: 1px solid #dddddd;
-  background: #f8f8f8;
 }
 
 .feature-image img {
@@ -304,6 +309,11 @@ p {
 
 .feature-copy {
   min-height: 0;
+}
+
+.feature-copy .lead {
+  color: #444444;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .post-list {
@@ -327,9 +337,6 @@ p {
 .post-thumb {
   float: left;
   margin: 2px 14px 8px 0;
-  padding: 3px;
-  border: 1px solid #dddddd;
-  background: #f8f8f8;
 }
 
 .post-thumb img {
@@ -360,10 +367,10 @@ p {
 
 .read-more .btn,
 .post .back .btn {
-  padding: 4px 8px;
+  padding: 5px 10px;
   color: #333333;
   border-color: #cccccc;
-  background: #f7f7f7;
+  background: #ffffff;
 }
 
 .post-list .date,
@@ -408,9 +415,6 @@ p {
 
 .post-image {
   margin: 0 0 24px;
-  padding: 6px;
-  border: 1px solid #dddddd;
-  background: #f8f8f8;
 }
 
 .post-image img {
@@ -456,8 +460,7 @@ p {
 }
 
 .archive-list li {
-  padding: 7px 0;
-  border-bottom: 1px solid #eeeeee;
+  padding: 8px 12px;
 }
 
 .topics-index h2 {
@@ -472,8 +475,7 @@ p {
 }
 
 .topics-index li {
-  padding: 7px 0;
-  border-bottom: 1px solid #eeeeee;
+  padding: 8px 12px;
 }
 
 .notebook-note {
@@ -544,8 +546,14 @@ body.night .site-title a {
 body.night #header,
 body.night #nav,
 body.night #nav-wrap,
+body.night .navbar-default,
 body.night #content,
 body.night .side-section,
+body.night .panel,
+body.night .panel-heading,
+body.night .list-group-item,
+body.night .thumbnail,
+body.night .well,
 body.night .side-section h2,
 body.night .side-section li,
 body.night .side-thumb,
@@ -570,6 +578,7 @@ body.night .post .back .btn {
 body.night .tagline,
 body.night .masthead-tagline,
 body.night #sidebar,
+body.night .feature-copy .lead,
 body.night .post .description,
 body.night .post-tags,
 body.night .post-list .excerpt,
@@ -595,12 +604,19 @@ body.night .post-thumb {
 }
 
 body.night .side-section h2,
-body.night .archive-month {
+body.night .archive-month,
+body.night .panel-heading {
   color: #dddddd;
 }
 
 body.night #nav-wrap,
 body.night #nav a:hover,
+body.night .navbar-default,
+body.night .panel,
+body.night .panel-heading,
+body.night .list-group-item,
+body.night .thumbnail,
+body.night .well,
 body.night .search-box input,
 body.night .search-box button,
 body.night .notebook-note,

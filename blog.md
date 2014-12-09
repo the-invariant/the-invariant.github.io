@@ -11,7 +11,7 @@ permalink: /blog/
   {% for post in site.posts limit:9 %}
   <li>
     {% if post.image %}
-    <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+    <a class="post-thumb thumbnail" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
     {% endif %}
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>

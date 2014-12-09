@@ -6,6 +6,6 @@ permalink: /notebooks/
 
 # Notebooks
 
-<div class="notebook-note">
-  working examples for Tutorials.
+<div class="notebook-note well">
+  Short notes and working examples will live here.
 </div>
