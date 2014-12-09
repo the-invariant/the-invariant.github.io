@@ -67,7 +67,8 @@ a:hover {
 
 #nav-wrap {
   border-top: 1px solid #d8d8d8;
-  background: #f7f7f7;
+  border-bottom: 1px solid #d8d8d8;
+  background: #fafafa;
 }
 
 #nav {
@@ -88,8 +89,9 @@ a:hover {
 
 #nav a {
   display: inline-block;
-  padding: 10px 12px 9px;
-  border-left: 1px solid #e3e3e3;
+  margin: 5px 2px;
+  padding: 7px 12px;
+  border: 1px solid transparent;
 }
 
 #nav li:first-child a {
@@ -97,18 +99,19 @@ a:hover {
 }
 
 #nav a:hover {
-  background: #eeeeee;
+  border-color: #dddddd;
+  background: #f0f0f0;
   text-decoration: none;
 }
 
 #night-toggle {
   margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  padding: 3px 7px;
+  border: 1px solid #cccccc;
+  background: #ffffff;
   color: #0645ad;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -145,15 +148,15 @@ a:hover {
 }
 
 .side-section {
-  margin: 0 0 18px;
-  padding: 0;
-  border-bottom: 0;
+  margin: 0 0 20px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .side-section h2 {
-  margin: 0;
-  padding: 0;
-  border-bottom: 0;
+  margin: 0 0 9px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #eeeeee;
   color: #333333;
   font-size: 14px;
   font-weight: bold;
@@ -180,7 +183,7 @@ a:hover {
 
 .side-section li {
   margin: 0;
-  padding: 8px 12px;
+  padding: 7px 9px;
   border-bottom: 0;
 }
 
@@ -207,7 +210,7 @@ a:hover {
 
 .search-box input {
   float: left;
-  width: 156px;
+  width: 162px;
   margin: 0;
   padding: 4px;
   border: 1px solid #cfcfcf;
@@ -218,7 +221,7 @@ a:hover {
 .search-box button {
   float: left;
   margin: 0 0 0 5px;
-  padding: 4px 7px;
+  padding: 5px 8px;
   border: 1px solid #bdbdbd;
   background: #eeeeee;
   color: #555555;
@@ -239,7 +242,7 @@ a:hover {
 
 .archive-months li {
   min-height: 0;
-  padding: 6px 12px;
+  padding: 6px 9px;
 }
 
 h1,
@@ -273,7 +276,8 @@ p {
 
 .feature-panel {
   margin: 0 0 32px;
-  padding: 0;
+  padding: 0 0 24px;
+  border: 0;
   border-bottom: 1px solid #dddddd;
   background: #ffffff;
 }
@@ -298,6 +302,7 @@ p {
   float: none;
   width: auto;
   margin: 0 0 18px;
+  padding: 4px;
 }
 
 .feature-image img {
@@ -324,7 +329,7 @@ p {
 
 .post-list li {
   min-height: 86px;
-  padding: 14px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -367,7 +372,7 @@ p {
 
 .read-more .btn,
 .post .back .btn {
-  padding: 5px 10px;
+  padding: 4px 8px;
   color: #333333;
   border-color: #cccccc;
   background: #ffffff;

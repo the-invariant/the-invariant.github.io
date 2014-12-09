@@ -7,5 +7,5 @@ permalink: /notebooks/
 # Notebooks
 
 <div class="notebook-note well">
-  Short notes and working examples will live here.
+  A place for code notes, worked examples, and small experiments.
 </div>

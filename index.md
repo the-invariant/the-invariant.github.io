@@ -3,14 +3,12 @@ layout: default
 title: Home
 ---
 
-<div class="feature-panel panel panel-default">
-  <div class="panel-body">
+<div class="feature-panel">
   <p class="feature-image thumbnail"><img src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
   <div class="feature-copy">
     <h1>Notes from the edge of science and technology.</h1>
     <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
        
-  </div>
   </div>
 </div>
 
@@ -26,6 +24,7 @@ title: Home
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <div class="excerpt">{{ post.excerpt }}</div>
+    <p class="read-more"><a class="btn btn-default btn-xs" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
   </li>
   {% endfor %}
 </ul>

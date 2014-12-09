@@ -16,7 +16,7 @@ permalink: /blog/
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <div class="excerpt">{{ post.excerpt }}</div>
-    <p class="read-more"><a class="btn btn-default" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
+    <p class="read-more"><a class="btn btn-default btn-xs" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
   </li>
   {% endfor %}
 </ul>
