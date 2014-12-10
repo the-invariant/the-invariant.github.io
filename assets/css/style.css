@@ -187,13 +187,21 @@ a:hover {
   border-bottom: 0;
 }
 
-.recent-posts li {
-  min-height: 50px;
+.recent-posts .recent-post-item {
+  min-height: 0;
+  padding: 8px;
+}
+
+.recent-posts .recent-post-item:after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
 .side-thumb {
   float: left;
-  margin: 0 10px 7px 0;
+  width: 66px;
+  margin: 0 10px 0 0;
   padding: 3px;
 }
 
@@ -202,6 +210,15 @@ a:hover {
   width: 58px;
   height: 40px;
   border: 0;
+}
+
+.side-post-body {
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.side-post-title {
+  display: block;
 }
 
 .side-search {

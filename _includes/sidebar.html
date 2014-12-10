@@ -28,12 +28,14 @@
     {% if site.posts.size > 0 %}
     <ul class="recent-posts list-group">
       {% for post in site.posts limit:3 %}
-      <li class="list-group-item">
+      <li class="list-group-item recent-post-item">
         {% if post.image %}
         <a class="side-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
         {% endif %}
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span class="side-date">{{ post.date | date: "%b %Y" }}</span>
+        <div class="side-post-body">
+          <a class="side-post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          <span class="side-date">{{ post.date | date: "%b %Y" }}</span>
+        </div>
       </li>
       {% endfor %}
     </ul>
