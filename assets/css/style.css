@@ -403,6 +403,12 @@ p {
   margin-right: 8px;
 }
 
+.post-meta {
+  color: #777777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
 .post-head {
   margin: 0 0 18px;
   padding: 0 0 10px;
@@ -490,6 +496,12 @@ p {
   text-transform: capitalize;
 }
 
+.topics-index h2 span {
+  color: #777777;
+  font-size: 13px;
+  font-weight: normal;
+}
+
 .topics-index ul {
   margin: 0 0 22px;
   padding: 0;
@@ -532,6 +544,52 @@ pre code {
   padding: 0;
   border: 0;
   background: transparent;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 18px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 7px 9px;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+th {
+  background: #f5f5f5;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 0 0 18px;
+  padding: 8px 14px;
+  border-left: 4px solid #dddddd;
+  color: #555555;
+  background: #fafafa;
+}
+
+figure {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 6px;
+  color: #777777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
 #footer {
@@ -603,10 +661,12 @@ body.night #sidebar,
 body.night .feature-copy .lead,
 body.night .post .description,
 body.night .post-tags,
+body.night .post-meta,
 body.night .post-list .excerpt,
 body.night .side-date,
 body.night .post-list .date,
 body.night .post .date,
+body.night figcaption,
 body.night #footer {
   color: #bbbbbb;
 }
@@ -642,6 +702,10 @@ body.night .well,
 body.night .search-box input,
 body.night .search-box button,
 body.night .notebook-note,
+body.night table,
+body.night th,
+body.night td,
+body.night blockquote,
 body.night .read-more .btn,
 body.night .post .back .btn,
 body.night pre,
@@ -653,6 +717,8 @@ body.night .search-box input,
 body.night .search-box button,
 body.night .read-more .btn,
 body.night .post .back .btn,
+body.night th,
+body.night blockquote,
 body.night pre,
 body.night code {
   color: #bbbbbb;
@@ -660,6 +726,9 @@ body.night code {
 
 body.night pre,
 body.night code,
+body.night table,
+body.night th,
+body.night td,
 body.night .topics-index li {
   border-color: #555555;
 }

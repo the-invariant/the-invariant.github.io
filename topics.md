@@ -9,7 +9,7 @@ permalink: /topics/
 {% if site.tags.size > 0 %}
 <div class="topics-index">
   {% for tag in site.tags %}
-  <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+  <h2 id="{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></h2>
   <ul class="list-group">
     {% for post in tag[1] %}
     <li class="list-group-item"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
