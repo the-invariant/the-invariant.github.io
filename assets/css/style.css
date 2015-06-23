@@ -19,7 +19,7 @@ a:hover {
 
 #wrap {
   width: 980px;
-  margin: 24px auto;
+  margin: 22px auto;
   padding: 0;
   background: #ffffff;
   border: 1px solid #cfcbbf;
@@ -28,7 +28,7 @@ a:hover {
 
 #header {
   position: relative;
-  padding: 30px 30px 0;
+  padding: 28px 30px 0;
   border-bottom: 1px solid #c9c9c9;
   text-align: center;
 }
@@ -42,7 +42,7 @@ a:hover {
 }
 
 #masthead {
-  margin: 0 auto 18px;
+  margin: 0 auto 16px;
 }
 
 .site-title {
@@ -89,8 +89,8 @@ a:hover {
 
 #nav a {
   display: inline-block;
-  margin: 5px 2px;
-  padding: 7px 12px;
+  margin: 4px 2px;
+  padding: 7px 11px;
   border: 1px solid transparent;
 }
 
@@ -106,7 +106,7 @@ a:hover {
 
 #night-toggle {
   margin: 0;
-  padding: 3px 7px;
+  padding: 2px 7px;
   border: 1px solid #cccccc;
   background: #ffffff;
   color: #0645ad;
@@ -120,7 +120,7 @@ a:hover {
 }
 
 #main {
-  padding: 32px 30px;
+  padding: 30px;
 }
 
 #main:after {
@@ -148,8 +148,8 @@ a:hover {
 }
 
 .side-section {
-  margin: 0 0 20px;
-  padding: 0 0 14px;
+  margin: 0 0 18px;
+  padding: 0 0 13px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -189,7 +189,7 @@ a:hover {
 
 .recent-posts .recent-post-item {
   min-height: 0;
-  padding: 8px;
+  padding: 7px 8px;
 }
 
 .recent-posts .recent-post-item:after {
@@ -200,14 +200,14 @@ a:hover {
 
 .side-thumb {
   float: left;
-  width: 66px;
+  width: 64px;
   margin: 0 10px 0 0;
   padding: 3px;
 }
 
 .side-thumb img {
   display: block;
-  width: 58px;
+  width: 56px;
   height: 40px;
   border: 0;
 }
@@ -227,7 +227,7 @@ a:hover {
 
 .search-box input {
   float: left;
-  width: 162px;
+  width: 160px;
   margin: 0;
   padding: 4px;
   border: 1px solid #cfcfcf;
@@ -238,7 +238,7 @@ a:hover {
 .search-box button {
   float: left;
   margin: 0 0 0 5px;
-  padding: 5px 8px;
+  padding: 4px 8px;
   border: 1px solid #bdbdbd;
   background: #eeeeee;
   color: #555555;
@@ -259,7 +259,7 @@ a:hover {
 
 .archive-months li {
   min-height: 0;
-  padding: 6px 9px;
+  padding: 6px 8px;
 }
 
 h1,
@@ -292,7 +292,7 @@ p {
 }
 
 .feature-panel {
-  margin: 0 0 32px;
+  margin: 0 0 30px;
   padding: 0 0 24px;
   border: 0;
   border-bottom: 1px solid #dddddd;
@@ -346,7 +346,7 @@ p {
 
 .post-list li {
   min-height: 86px;
-  padding: 15px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -358,7 +358,7 @@ p {
 
 .post-thumb {
   float: left;
-  margin: 2px 14px 8px 0;
+  margin: 2px 13px 8px 0;
 }
 
 .post-thumb img {
@@ -389,7 +389,7 @@ p {
 
 .read-more .btn,
 .post .back .btn {
-  padding: 4px 8px;
+  padding: 3px 8px;
   color: #333333;
   border-color: #cccccc;
   background: #ffffff;
@@ -410,7 +410,7 @@ p {
 }
 
 .post-head {
-  margin: 0 0 18px;
+  margin: 0 0 17px;
   padding: 0 0 10px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -453,7 +453,7 @@ p {
 }
 
 .post .back {
-  margin-top: 30px;
+  margin-top: 28px;
   padding-top: 16px;
   border-top: 1px solid #e3e3e3;
   font-family: Helvetica, Arial, sans-serif;
@@ -492,7 +492,7 @@ p {
 }
 
 .topics-index h2 {
-  margin-top: 26px;
+  margin-top: 24px;
   text-transform: capitalize;
 }
 
@@ -509,12 +509,12 @@ p {
 }
 
 .topics-index li {
-  padding: 8px 12px;
+  padding: 8px 10px;
 }
 
 .notebook-note {
   margin: 0 0 22px;
-  padding: 12px 14px;
+  padding: 12px 13px;
   border: 1px solid #dddddd;
   background: #f8f8f8;
 }
@@ -527,7 +527,7 @@ code {
 
 pre {
   margin: 0 0 18px;
-  padding: 10px;
+  padding: 9px 10px;
   overflow-x: auto;
   border: 1px solid #d8d8d8;
   background: #f5f5f5;
@@ -555,7 +555,7 @@ table {
 
 th,
 td {
-  padding: 7px 9px;
+  padding: 7px 8px;
   border: 1px solid #dddddd;
   text-align: left;
 }
@@ -568,7 +568,7 @@ th {
 
 blockquote {
   margin: 0 0 18px;
-  padding: 8px 14px;
+  padding: 8px 13px;
   border-left: 4px solid #dddddd;
   color: #555555;
   background: #fafafa;
