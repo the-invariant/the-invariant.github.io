@@ -1,5 +1,7 @@
 # Build
 
+This branch is a local Jekyll 3 compatibility test.
+
 Install the local gems:
 
 ```sh

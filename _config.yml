@@ -2,6 +2,6 @@ title: The Invariant
 description: Thoughts on science, technology, and human nature.
 url: "https://the-invariant.github.io"
 baseurl: ""
-markdown: rdiscount
+markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-pygments: true
+highlighter: rouge

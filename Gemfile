@@ -1,5 +1,4 @@
 source "https://rubygems.org"
 
-gem "jekyll", "2.5.3"
-gem "rdiscount"
-gem "pygments.rb"
+gem "jekyll", "3.0.0"
+gem "rouge"
