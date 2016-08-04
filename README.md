@@ -1,5 +1,5 @@
 # The Invariant
 
-branch for checking local Jekyll 3 preview compatibility.
+branch for checking local bootstrap 3.3.7 compatibility.
 
 

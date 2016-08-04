@@ -19,6 +19,7 @@ a:hover {
 
 #wrap {
   width: 980px;
+  max-width: 980px;
   margin: 22px auto;
   padding: 0;
   background: #ffffff;
@@ -92,6 +93,7 @@ a:hover {
   margin: 4px 2px;
   padding: 7px 11px;
   border: 1px solid transparent;
+  color: #0645ad;
 }
 
 #nav li:first-child a {
@@ -228,6 +230,7 @@ a:hover {
 .search-box input {
   float: left;
   width: 160px;
+  height: 28px;
   margin: 0;
   padding: 4px;
   border: 1px solid #cfcfcf;
@@ -359,6 +362,7 @@ p {
 .post-thumb {
   float: left;
   margin: 2px 13px 8px 0;
+  padding: 3px;
 }
 
 .post-thumb img {
@@ -393,6 +397,7 @@ p {
   color: #333333;
   border-color: #cccccc;
   background: #ffffff;
+  background-image: none;
 }
 
 .post-list .date,
@@ -517,6 +522,7 @@ p {
   padding: 12px 13px;
   border: 1px solid #dddddd;
   background: #f8f8f8;
+  background-image: none;
 }
 
 pre,
