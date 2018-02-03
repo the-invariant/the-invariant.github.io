@@ -13,16 +13,16 @@ layout: default
   {% if page.tags.size > 0 %}
   <p class="post-tags post-meta">Filed under:
     {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/topics/#{{ tag }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+    <a class="badge badge-secondary" href="{{ site.baseurl }}/topics/#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </p>
   {% endif %}
 
   {% if page.image %}
-  <p class="post-image thumbnail"><img src="{{ site.baseurl }}{{ page.image }}" alt=""></p>
+  <p class="post-image"><img class="img-fluid" src="{{ site.baseurl }}{{ page.image }}" alt=""></p>
   {% endif %}
 
   {{ content }}
 
-  <p class="back"><a class="btn btn-default btn-sm" href="{{ site.baseurl }}/blog/">Back to Blog</a></p>
+  <p class="back"><a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}/blog/">Back to Blog</a></p>
 </article>

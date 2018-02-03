@@ -1,30 +1,39 @@
-<div id="sidebar" class="col-sm-4 col-md-4">
-  <div class="side-section">
-    <h2>About</h2>
-    <p>{{ site.description }}</p>
-    <p><a href="{{ site.baseurl }}/blog/">Blog</a></p>
-  </div>
-
-  <div class="side-section">
-    <h2>Topics</h2>
-    <p><a href="{{ site.baseurl }}/topics/">Topics</a></p>
-  </div>
-
-  <div class="side-section">
-    <h2>Notebooks</h2>
-    <p><a href="{{ site.baseurl }}/notebooks/">Notebooks</a></p>
-  </div>
-
-  <div class="side-section side-search">
-    <h2>Search</h2>
-    <div class="search-box">
-      <input class="form-control" type="text" name="q">
-      <button class="btn btn-default btn-xs" type="button" disabled="disabled">Search</button>
+<div id="sidebar" class="col-md-4">
+  <div class="side-section card">
+    <div class="card-body">
+      <h2 class="card-title">About</h2>
+      <p class="card-text">{{ site.description }}</p>
+      <p><a href="{{ site.baseurl }}/blog/">Blog</a></p>
     </div>
   </div>
 
-  <div class="side-section">
-    <h2>Recent Posts</h2>
+  <div class="side-section card">
+    <div class="card-body">
+      <h2 class="card-title">Topics</h2>
+      <p><a href="{{ site.baseurl }}/topics/">Topics</a></p>
+    </div>
+  </div>
+
+  <div class="side-section card">
+    <div class="card-body">
+      <h2 class="card-title">Notebooks</h2>
+      <p><a href="{{ site.baseurl }}/notebooks/">Notebooks</a></p>
+    </div>
+  </div>
+
+  <div class="side-section side-search card">
+    <div class="card-body">
+      <h2 class="card-title">Search</h2>
+      <div class="search-box">
+        <input class="form-control" type="text" name="q">
+        <button class="btn btn-outline-secondary btn-sm" type="button" disabled="disabled">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-section card">
+    <div class="card-body">
+    <h2 class="card-title">Recent Posts</h2>
     {% if site.posts.size > 0 %}
     <ul class="recent-posts list-group">
       {% for post in site.posts limit:3 %}
@@ -42,10 +51,12 @@
     {% else %}
     <p>No posts yet.</p>
     {% endif %}
+    </div>
   </div>
 
-  <div class="side-section">
-    <h2>Archive</h2>
+  <div class="side-section card">
+    <div class="card-body">
+    <h2 class="card-title">Archive</h2>
     {% if site.posts.size > 0 %}
     <ul class="archive-months list-group">
       {% for post in site.posts %}
@@ -59,5 +70,6 @@
     {% else %}
     <p>No posts yet.</p>
     {% endif %}
+    </div>
   </div>
 </div>

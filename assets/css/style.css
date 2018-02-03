@@ -70,6 +70,7 @@ a:hover {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   background: #fafafa;
+  padding: 0;
 }
 
 #nav {
@@ -151,8 +152,8 @@ a:hover {
 
 .side-section {
   margin: 0 0 18px;
-  padding: 0 0 13px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0;
+  border: 1px solid #e5e5e5;
 }
 
 .side-section h2 {
@@ -165,12 +166,13 @@ a:hover {
   text-transform: uppercase;
 }
 
-.side-section .panel-heading {
-  border-bottom: 1px solid #dddddd;
+.side-section .card-body {
+  padding: 12px;
+  font-size: 13px;
 }
 
-.side-section .panel-body {
-  font-size: 13px;
+.side-section .card-title {
+  margin-bottom: 9px;
 }
 
 .side-section p {
@@ -205,6 +207,8 @@ a:hover {
   width: 64px;
   margin: 0 10px 0 0;
   padding: 3px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
 }
 
 .side-thumb img {
@@ -229,7 +233,7 @@ a:hover {
 
 .search-box input {
   float: left;
-  width: 160px;
+  width: 150px;
   height: 28px;
   margin: 0;
   padding: 4px;
@@ -296,9 +300,8 @@ p {
 
 .feature-panel {
   margin: 0 0 30px;
-  padding: 0 0 24px;
-  border: 0;
-  border-bottom: 1px solid #dddddd;
+  padding: 0;
+  border: 1px solid #dddddd;
   background: #ffffff;
 }
 
@@ -321,8 +324,8 @@ p {
 .feature-image {
   float: none;
   width: auto;
-  margin: 0 0 18px;
-  padding: 4px;
+  margin: 0;
+  padding: 0;
 }
 
 .feature-image img {
@@ -334,6 +337,7 @@ p {
 
 .feature-copy {
   min-height: 0;
+  padding: 18px;
 }
 
 .feature-copy .lead {
@@ -362,7 +366,9 @@ p {
 .post-thumb {
   float: left;
   margin: 2px 13px 8px 0;
-  padding: 3px;
+  padding: 4px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
 }
 
 .post-thumb img {
@@ -393,11 +399,7 @@ p {
 
 .read-more .btn,
 .post .back .btn {
-  padding: 3px 8px;
-  color: #333333;
-  border-color: #cccccc;
-  background: #ffffff;
-  background-image: none;
+  padding: 4px 9px;
 }
 
 .post-list .date,
@@ -446,8 +448,15 @@ p {
   font-size: 13px;
 }
 
+.post-tags .badge {
+  margin-right: 4px;
+}
+
 .post-image {
   margin: 0 0 24px;
+  padding: 4px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
 }
 
 .post-image img {
@@ -502,7 +511,6 @@ p {
 }
 
 .topics-index h2 span {
-  color: #777777;
   font-size: 13px;
   font-weight: normal;
 }
@@ -519,10 +527,8 @@ p {
 
 .notebook-note {
   margin: 0 0 22px;
-  padding: 12px 13px;
   border: 1px solid #dddddd;
-  background: #f8f8f8;
-  background-image: none;
+  background: #ffffff;
 }
 
 pre,
@@ -632,14 +638,12 @@ body.night .site-title a {
 body.night #header,
 body.night #nav,
 body.night #nav-wrap,
-body.night .navbar-default,
+body.night .navbar-light,
 body.night #content,
 body.night .side-section,
-body.night .panel,
-body.night .panel-heading,
+body.night .card,
+body.night .card-body,
 body.night .list-group-item,
-body.night .thumbnail,
-body.night .well,
 body.night .side-section h2,
 body.night .side-section li,
 body.night .side-thumb,
@@ -653,6 +657,7 @@ body.night .feature-image,
 body.night .archive-year,
 body.night .archive-list li,
 body.night .post-head,
+body.night .post-image,
 body.night .search-box input,
 body.night .search-box button,
 body.night .notebook-note,
@@ -677,11 +682,6 @@ body.night #footer {
   color: #bbbbbb;
 }
 
-body.night .post-image {
-  border-color: #555555;
-  background: #242424;
-}
-
 body.night .feature-image {
   background: #242424;
 }
@@ -692,22 +692,20 @@ body.night .post-thumb {
 }
 
 body.night .side-section h2,
-body.night .archive-month,
-body.night .panel-heading {
+body.night .archive-month {
   color: #dddddd;
 }
 
 body.night #nav-wrap,
 body.night #nav a:hover,
-body.night .navbar-default,
-body.night .panel,
-body.night .panel-heading,
+body.night .navbar-light,
+body.night .card,
+body.night .card-body,
 body.night .list-group-item,
-body.night .thumbnail,
-body.night .well,
 body.night .search-box input,
 body.night .search-box button,
 body.night .notebook-note,
+body.night .post-image,
 body.night table,
 body.night th,
 body.night td,
