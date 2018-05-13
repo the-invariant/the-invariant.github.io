@@ -474,6 +474,19 @@ p {
   font-size: 13px;
 }
 
+.post-comments {
+  margin: 30px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+.post-comments h2 {
+  margin: 0 0 14px;
+  padding: 0;
+  border-bottom: 0;
+  font-size: 20px;
+}
+
 .side-date {
   color: #777777;
   font-size: 12px;
@@ -617,6 +630,15 @@ figcaption {
   margin: 0 0 6px;
 }
 
+.footer-links a {
+  margin-right: 4px;
+}
+
+.footer-sep {
+  color: #999999;
+  margin: 0 4px 0 0;
+}
+
 body.night {
   background: #222222;
   color: #dddddd;
@@ -658,6 +680,7 @@ body.night .archive-year,
 body.night .archive-list li,
 body.night .post-head,
 body.night .post-image,
+body.night .post-comments,
 body.night .search-box input,
 body.night .search-box button,
 body.night .notebook-note,
@@ -678,6 +701,7 @@ body.night .side-date,
 body.night .post-list .date,
 body.night .post .date,
 body.night figcaption,
+body.night .footer-sep,
 body.night #footer {
   color: #bbbbbb;
 }

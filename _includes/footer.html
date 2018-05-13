@@ -1,4 +1,12 @@
 <div id="footer">
   <p>The Invariant. Thoughts on science, technology, and human nature.</p>
-  <p><a href="https://github.com/the-invariant/">GitHub</a></p>
+  <p class="footer-links">
+    <a href="https://github.com/the-invariant/">GitHub</a>
+    {% if site.linkedin_url and site.linkedin_url != "" %}
+    <span class="footer-sep">/</span> <a href="{{ site.linkedin_url }}">LinkedIn</a>
+    {% endif %}
+    {% if site.twitter_url and site.twitter_url != "" %}
+    <span class="footer-sep">/</span> <a href="{{ site.twitter_url }}">Twitter</a>
+    {% endif %}
+  </p>
 </div>
