@@ -765,6 +765,128 @@ body.night #night-toggle {
   color: #9db7e8;
 }
 
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    background: #222222;
+    color: #dddddd;
+  }
+
+  body:not(.light) #wrap {
+    background: #2b2b2b;
+    border-color: #555555;
+  }
+
+  body:not(.light) a {
+    color: #9db7e8;
+  }
+
+  body:not(.light) .site-title a {
+    color: #eeeeee;
+  }
+
+  body:not(.light) #header,
+  body:not(.light) #nav,
+  body:not(.light) #nav-wrap,
+  body:not(.light) .navbar-light,
+  body:not(.light) #content,
+  body:not(.light) .side-section,
+  body:not(.light) .card,
+  body:not(.light) .card-body,
+  body:not(.light) .list-group-item,
+  body:not(.light) .side-section h2,
+  body:not(.light) .side-section li,
+  body:not(.light) .side-thumb,
+  body:not(.light) .post-thumb,
+  body:not(.light) #footer,
+  body:not(.light) h2,
+  body:not(.light) .post .back,
+  body:not(.light) .post-list li,
+  body:not(.light) .feature-panel,
+  body:not(.light) .feature-image,
+  body:not(.light) .archive-year,
+  body:not(.light) .archive-list li,
+  body:not(.light) .post-head,
+  body:not(.light) .post-image,
+  body:not(.light) .post-comments,
+  body:not(.light) .search-box input,
+  body:not(.light) .search-box button,
+  body:not(.light) .notebook-note,
+  body:not(.light) .read-more .btn,
+  body:not(.light) .post .back .btn {
+    border-color: #555555;
+  }
+
+  body:not(.light) .tagline,
+  body:not(.light) .masthead-tagline,
+  body:not(.light) #sidebar,
+  body:not(.light) .feature-copy .lead,
+  body:not(.light) .post .description,
+  body:not(.light) .post-tags,
+  body:not(.light) .post-meta,
+  body:not(.light) .post-list .excerpt,
+  body:not(.light) .side-date,
+  body:not(.light) .post-list .date,
+  body:not(.light) .post .date,
+  body:not(.light) figcaption,
+  body:not(.light) .footer-sep,
+  body:not(.light) #footer {
+    color: #bbbbbb;
+  }
+
+  body:not(.light) .feature-image,
+  body:not(.light) .side-thumb,
+  body:not(.light) .post-thumb,
+  body:not(.light) #nav-wrap,
+  body:not(.light) #nav a:hover,
+  body:not(.light) .navbar-light,
+  body:not(.light) .card,
+  body:not(.light) .card-body,
+  body:not(.light) .list-group-item,
+  body:not(.light) .search-box input,
+  body:not(.light) .search-box button,
+  body:not(.light) .notebook-note,
+  body:not(.light) .post-image,
+  body:not(.light) table,
+  body:not(.light) th,
+  body:not(.light) td,
+  body:not(.light) blockquote,
+  body:not(.light) .read-more .btn,
+  body:not(.light) .post .back .btn,
+  body:not(.light) pre,
+  body:not(.light) code {
+    background: #242424;
+  }
+
+  body:not(.light) .side-section h2,
+  body:not(.light) .archive-month {
+    color: #dddddd;
+  }
+
+  body:not(.light) .search-box input,
+  body:not(.light) .search-box button,
+  body:not(.light) .read-more .btn,
+  body:not(.light) .post .back .btn,
+  body:not(.light) th,
+  body:not(.light) blockquote,
+  body:not(.light) pre,
+  body:not(.light) code {
+    color: #bbbbbb;
+  }
+
+  body:not(.light) pre,
+  body:not(.light) code,
+  body:not(.light) table,
+  body:not(.light) th,
+  body:not(.light) td,
+  body:not(.light) .topics-index li {
+    border-color: #555555;
+  }
+
+  body:not(.light) #night-toggle {
+    color: #9db7e8;
+  }
+}
+
 @media screen and (max-width: 980px) {
   #wrap {
     width: auto;
