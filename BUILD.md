@@ -1,6 +1,6 @@
 # Build
 
-This branch is a local Jekyll 3 compatibility test.
+This branch uses a local Jekyll 4.1 setup.
 
 Install the local gems:
 

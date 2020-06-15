@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign first = true %}
+{% for post in site.posts %}
+{% unless first %},{% endunless %}
+{% assign first = false %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
+    "type": "post",
+    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    "year": {{ post.date | date: "%Y" | jsonify }},
+    "tags": {% if post.tags %}{{ post.tags | jsonify }}{% else %}[]{% endif %},
+    "excerpt": {{ post.excerpt | strip_html | normalize_whitespace | jsonify }},
+    "content": {{ post.content | strip_html | normalize_whitespace | jsonify }}
+  }
+{% endfor %}
+{% for item in site.pages %}
+{% if item.title and item.url != "/search/" and item.url != "/search.json" %}
+{% unless first %},{% endunless %}
+{% assign first = false %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "type": "page",
+    "date": "",
+    "year": "",
+    "tags": {% if item.tags %}{{ item.tags | jsonify }}{% else %}[]{% endif %},
+    "excerpt": {{ item.description | default: site.description | strip_html | normalize_whitespace | jsonify }},
+    "content": {{ item.content | strip_html | normalize_whitespace | jsonify }}
+  }
+{% endif %}
+{% endfor %}
+]

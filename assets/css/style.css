@@ -259,6 +259,83 @@ a:hover {
   content: "";
 }
 
+.search-page-form {
+  margin: 0 0 18px;
+  padding: 14px;
+  border: 1px solid #e5e5e5;
+  background: #fbfbfb;
+}
+
+.search-page-form label {
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.search-page-form input,
+.search-page-form select {
+  border: 1px solid #cfcfcf;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.search-filter-row {
+  margin-top: 4px;
+}
+
+.search-count {
+  margin: 0 0 8px;
+  color: #777777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.search-results {
+  margin: 22px 0 0;
+}
+
+.search-results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-result {
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.search-result-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.search-result-meta {
+  color: #777777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.search-result-excerpt {
+  margin: 6px 0 0;
+  color: #444444;
+}
+
+.search-result-tags {
+  margin: 8px 0 0;
+}
+
+.search-result-tags .badge {
+  font-weight: normal;
+}
+
+.search-empty {
+  color: #777777;
+  font-style: italic;
+}
+
 .side-section .side-date {
   display: block;
   margin-top: 2px;
@@ -683,6 +760,10 @@ body.night .post-image,
 body.night .post-comments,
 body.night .search-box input,
 body.night .search-box button,
+body.night .search-page-form,
+body.night .search-page-form input,
+body.night .search-page-form select,
+body.night .search-result,
 body.night .notebook-note,
 body.night .read-more .btn,
 body.night .post .back .btn {
@@ -700,6 +781,11 @@ body.night .post-list .excerpt,
 body.night .side-date,
 body.night .post-list .date,
 body.night .post .date,
+body.night .search-page-form label,
+body.night .search-count,
+body.night .search-result-meta,
+body.night .search-result-excerpt,
+body.night .search-empty,
 body.night figcaption,
 body.night .footer-sep,
 body.night #footer {
@@ -728,6 +814,9 @@ body.night .card-body,
 body.night .list-group-item,
 body.night .search-box input,
 body.night .search-box button,
+body.night .search-page-form,
+body.night .search-page-form input,
+body.night .search-page-form select,
 body.night .notebook-note,
 body.night .post-image,
 body.night table,
@@ -743,6 +832,8 @@ body.night code {
 
 body.night .search-box input,
 body.night .search-box button,
+body.night .search-page-form input,
+body.night .search-page-form select,
 body.night .read-more .btn,
 body.night .post .back .btn,
 body.night th,
@@ -757,8 +848,14 @@ body.night code,
 body.night table,
 body.night th,
 body.night td,
+body.night .search-result-tags .badge,
 body.night .topics-index li {
   border-color: #555555;
+}
+
+body.night .search-result-tags .badge {
+  background: #555555;
+  color: #dddddd;
 }
 
 body.night #night-toggle {
@@ -810,6 +907,10 @@ body.night #night-toggle {
   body:not(.light) .post-comments,
   body:not(.light) .search-box input,
   body:not(.light) .search-box button,
+  body:not(.light) .search-page-form,
+  body:not(.light) .search-page-form input,
+  body:not(.light) .search-page-form select,
+  body:not(.light) .search-result,
   body:not(.light) .notebook-note,
   body:not(.light) .read-more .btn,
   body:not(.light) .post .back .btn {
@@ -827,6 +928,11 @@ body.night #night-toggle {
   body:not(.light) .side-date,
   body:not(.light) .post-list .date,
   body:not(.light) .post .date,
+  body:not(.light) .search-page-form label,
+  body:not(.light) .search-count,
+  body:not(.light) .search-result-meta,
+  body:not(.light) .search-result-excerpt,
+  body:not(.light) .search-empty,
   body:not(.light) figcaption,
   body:not(.light) .footer-sep,
   body:not(.light) #footer {
@@ -844,6 +950,9 @@ body.night #night-toggle {
   body:not(.light) .list-group-item,
   body:not(.light) .search-box input,
   body:not(.light) .search-box button,
+  body:not(.light) .search-page-form,
+  body:not(.light) .search-page-form input,
+  body:not(.light) .search-page-form select,
   body:not(.light) .notebook-note,
   body:not(.light) .post-image,
   body:not(.light) table,
@@ -864,6 +973,8 @@ body.night #night-toggle {
 
   body:not(.light) .search-box input,
   body:not(.light) .search-box button,
+  body:not(.light) .search-page-form input,
+  body:not(.light) .search-page-form select,
   body:not(.light) .read-more .btn,
   body:not(.light) .post .back .btn,
   body:not(.light) th,
@@ -878,8 +989,14 @@ body.night #night-toggle {
   body:not(.light) table,
   body:not(.light) th,
   body:not(.light) td,
+  body:not(.light) .search-result-tags .badge,
   body:not(.light) .topics-index li {
     border-color: #555555;
+  }
+
+  body:not(.light) .search-result-tags .badge {
+    background: #555555;
+    color: #dddddd;
   }
 
   body:not(.light) #night-toggle {
@@ -923,5 +1040,15 @@ body.night #night-toggle {
   #header-utility {
     position: static;
     margin-bottom: 8px;
+  }
+
+  .search-page-form input {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 8px;
+  }
+
+  .search-page-form button {
+    clear: left;
   }
 }

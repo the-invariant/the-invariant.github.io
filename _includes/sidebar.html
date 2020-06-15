@@ -24,10 +24,10 @@
   <div class="side-section side-search card">
     <div class="card-body">
       <h2 class="card-title">Search</h2>
-      <div class="search-box">
-        <input class="form-control" type="text" name="q">
-        <button class="btn btn-outline-secondary btn-sm" type="button" disabled="disabled">Search</button>
-      </div>
+      <form class="search-box" action="{{ site.baseurl }}/search/" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search">
+        <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+      </form>
     </div>
   </div>
 
