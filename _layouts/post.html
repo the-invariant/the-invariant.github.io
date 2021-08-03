@@ -13,7 +13,7 @@ layout: default
   {% if page.tags.size > 0 %}
   <p class="post-tags post-meta">Filed under:
     {% for tag in page.tags %}
-    <a class="badge badge-secondary" href="{{ site.baseurl }}/topics/#{{ tag }}">{{ tag }}</a>
+    <a class="badge bg-secondary" href="{{ site.baseurl }}/topics/#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </p>
   {% endif %}

@@ -228,7 +228,7 @@
       if (matches[i].tags && matches[i].tags.length) {
         html += '<p class="search-result-tags">';
         for (var j = 0; j < matches[i].tags.length; j += 1) {
-          html += '<span class="badge badge-secondary">' + escapeHtml(matches[i].tags[j]) + "</span> ";
+          html += '<span class="badge bg-secondary">' + escapeHtml(matches[i].tags[j]) + "</span> ";
         }
         html += "</p>";
       }

@@ -283,6 +283,10 @@ a:hover {
   margin-top: 4px;
 }
 
+.search-field {
+  margin-bottom: 12px;
+}
+
 .search-count {
   margin: 0 0 8px;
   color: #777777;
@@ -621,6 +625,29 @@ p {
   background: #ffffff;
 }
 
+.notebook-card {
+  margin: 0 0 22px;
+  border: 1px solid #dddddd;
+}
+
+.notebook-card .card-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.notebook-links {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.notebook-links li {
+  margin: 0 0 5px;
+}
+
+.notebook-open-placeholder {
+  color: #777777;
+}
+
 pre,
 code {
   font-family: Consolas, "Courier New", monospace;
@@ -765,6 +792,7 @@ body.night .search-page-form input,
 body.night .search-page-form select,
 body.night .search-result,
 body.night .notebook-note,
+body.night .notebook-card,
 body.night .read-more .btn,
 body.night .post .back .btn {
   border-color: #555555;
@@ -786,6 +814,7 @@ body.night .search-count,
 body.night .search-result-meta,
 body.night .search-result-excerpt,
 body.night .search-empty,
+body.night .notebook-open-placeholder,
 body.night figcaption,
 body.night .footer-sep,
 body.night #footer {
@@ -818,6 +847,7 @@ body.night .search-page-form,
 body.night .search-page-form input,
 body.night .search-page-form select,
 body.night .notebook-note,
+body.night .notebook-card,
 body.night .post-image,
 body.night table,
 body.night th,
@@ -912,6 +942,7 @@ body.night #night-toggle {
   body:not(.light) .search-page-form select,
   body:not(.light) .search-result,
   body:not(.light) .notebook-note,
+  body:not(.light) .notebook-card,
   body:not(.light) .read-more .btn,
   body:not(.light) .post .back .btn {
     border-color: #555555;
@@ -933,6 +964,7 @@ body.night #night-toggle {
   body:not(.light) .search-result-meta,
   body:not(.light) .search-result-excerpt,
   body:not(.light) .search-empty,
+  body:not(.light) .notebook-open-placeholder,
   body:not(.light) figcaption,
   body:not(.light) .footer-sep,
   body:not(.light) #footer {
@@ -954,6 +986,7 @@ body.night #night-toggle {
   body:not(.light) .search-page-form input,
   body:not(.light) .search-page-form select,
   body:not(.light) .notebook-note,
+  body:not(.light) .notebook-card,
   body:not(.light) .post-image,
   body:not(.light) table,
   body:not(.light) th,

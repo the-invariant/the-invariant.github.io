@@ -1,0 +1,20 @@
+<div class="notebook-card card">
+  <div class="card-body">
+    <h2 class="card-title">{{ include.title | default: "Notebook entry" }}</h2>
+    {% if include.description %}
+    <p class="card-text">{{ include.description }}</p>
+    {% endif %}
+    <ul class="notebook-links">
+      {% if include.related_post %}
+      <li><a href="{{ include.related_post }}">Related post</a></li>
+      {% endif %}
+      {% if include.download %}
+      <li><a href="{{ include.download }}">Download</a></li>
+      {% endif %}
+      {% if include.source %}
+      <li><a href="{{ include.source }}">View source</a></li>
+      {% endif %}
+      <li><span class="notebook-open-placeholder">Open in browser</span></li>
+    </ul>
+  </div>
+</div>

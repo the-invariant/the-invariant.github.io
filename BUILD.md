@@ -1,6 +1,6 @@
 # Build
 
-This branch uses a local Jekyll 4.1 setup.
+This branch uses a local Jekyll 4.2 setup.
 
 Install the local gems:
 
