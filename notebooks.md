@@ -14,5 +14,5 @@ permalink: /notebooks/
 
 {% include notebook-card.html
   title="Notebook shell"
-  description="Future notebook entries can include a short description, a related post, a download link, source, and an open-in-browser placeholder."
+  description=""
 %}
