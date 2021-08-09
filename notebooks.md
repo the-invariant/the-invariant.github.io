@@ -6,7 +6,7 @@ permalink: /notebooks/
 
 # Notebooks
 
-<div class="notebook-note card">
+<div class="notebook-note card shadow-sm">
   <div class="card-body">
     <p>A place for code notes, worked examples, and small experiments.</p>
   </div>
@@ -14,5 +14,5 @@ permalink: /notebooks/
 
 {% include notebook-card.html
   title="Notebook shell"
-  description=""
+  description="Notebook files can be listed here as they are added."
 %}

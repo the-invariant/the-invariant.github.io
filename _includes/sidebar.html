@@ -1,5 +1,5 @@
-<div id="sidebar" class="col-md-4">
-  <div class="side-section card">
+<aside id="sidebar" class="col-lg-4">
+  <div class="side-section card shadow-sm">
     <div class="card-body">
       <h2 class="card-title">About</h2>
       <p class="card-text">{{ site.description }}</p>
@@ -7,69 +7,69 @@
     </div>
   </div>
 
-  <div class="side-section card">
+  <div class="side-section side-search card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Search</h2>
+      <form class="search-box" action="{{ site.baseurl }}/search/" method="get">
+        <input class="form-control form-control-sm" type="text" name="q" placeholder="Search">
+        <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="side-section card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Recent Posts</h2>
+      {% if site.posts.size > 0 %}
+      <ul class="recent-posts list-group list-group-flush">
+        {% for post in site.posts limit:3 %}
+        <li class="list-group-item recent-post-item">
+          {% if post.image %}
+          <a class="side-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+          {% endif %}
+          <div class="side-post-body">
+            <a class="side-post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <span class="side-date">{{ post.date | date: "%b %Y" }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts yet.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="side-section card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Archive</h2>
+      {% if site.posts.size > 0 %}
+      <ul class="archive-months list-group list-group-flush">
+        {% for post in site.posts %}
+        {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
+        {% if this_month != last_month %}
+        <li class="list-group-item"><a href="{{ site.baseurl }}/archive/">{{ this_month }}</a></li>
+        {% assign last_month = this_month %}
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts yet.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="side-section card shadow-sm">
     <div class="card-body">
       <h2 class="card-title">Topics</h2>
       <p><a href="{{ site.baseurl }}/topics/">Topics</a></p>
     </div>
   </div>
 
-  <div class="side-section card">
+  <div class="side-section card shadow-sm">
     <div class="card-body">
       <h2 class="card-title">Notebooks</h2>
       <p><a href="{{ site.baseurl }}/notebooks/">Notebooks</a></p>
     </div>
   </div>
-
-  <div class="side-section side-search card">
-    <div class="card-body">
-      <h2 class="card-title">Search</h2>
-      <form class="search-box" action="{{ site.baseurl }}/search/" method="get">
-        <input class="form-control" type="text" name="q" placeholder="Search">
-        <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="side-section card">
-    <div class="card-body">
-    <h2 class="card-title">Recent Posts</h2>
-    {% if site.posts.size > 0 %}
-    <ul class="recent-posts list-group">
-      {% for post in site.posts limit:3 %}
-      <li class="list-group-item recent-post-item">
-        {% if post.image %}
-        <a class="side-thumb" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
-        {% endif %}
-        <div class="side-post-body">
-          <a class="side-post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-          <span class="side-date">{{ post.date | date: "%b %Y" }}</span>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No posts yet.</p>
-    {% endif %}
-    </div>
-  </div>
-
-  <div class="side-section card">
-    <div class="card-body">
-    <h2 class="card-title">Archive</h2>
-    {% if site.posts.size > 0 %}
-    <ul class="archive-months list-group">
-      {% for post in site.posts %}
-      {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
-      {% if this_month != last_month %}
-      <li class="list-group-item"><a href="{{ site.baseurl }}/archive/">{{ this_month }}</a></li>
-      {% assign last_month = this_month %}
-      {% endif %}
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No posts yet.</p>
-    {% endif %}
-    </div>
-  </div>
-</div>
+</aside>

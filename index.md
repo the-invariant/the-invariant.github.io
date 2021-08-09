@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<div class="feature-panel card">
+<div class="feature-panel card shadow-sm mb-4">
   <p class="feature-image"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
   <div class="feature-copy card-body">
     <h1>Notes from the edge of science and technology.</h1>
@@ -15,19 +15,23 @@ title: Home
 ## Recent posts
 
 {% if site.posts.size > 0 %}
-<ul class="post-list">
+<div class="post-list row g-3">
   {% for post in site.posts limit:4 %}
-  <li>
-    {% if post.image %}
-    <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img class="img-fluid" src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
-    {% endif %}
-    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-    <div class="excerpt">{{ post.excerpt }}</div>
-    <p class="read-more"><a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
-  </li>
+  <article class="post-list-item col-md-6">
+    <div class="post-card card h-100 shadow-sm">
+      {% if post.image %}
+      <a class="post-thumb" href="{{ site.baseurl }}{{ post.url }}"><img class="img-fluid" src="{{ site.baseurl }}{{ post.image }}" alt=""></a>
+      {% endif %}
+      <div class="card-body">
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <div class="excerpt">{{ post.excerpt }}</div>
+        <p class="read-more"><a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
+      </div>
+    </div>
+  </article>
   {% endfor %}
-</ul>
+</div>
 {% else %}
 <p>No posts yet.</p>
 {% endif %}

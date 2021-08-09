@@ -8,7 +8,7 @@ permalink: /search/
 
 Search runs in the browser.
 
-<form id="search-form" class="search-page-form" action="{{ site.baseurl }}/search/" method="get">
+<form id="search-form" class="search-page-form card shadow-sm" action="{{ site.baseurl }}/search/" method="get">
   <div class="row">
     <div class="col-md-12 search-field">
       <label for="search-input">Search</label>

@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: #e6e4dc;
+  background: #f3f2ee;
   color: #222222;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.68;
 }
 
 a {
@@ -18,38 +18,33 @@ a:hover {
 }
 
 #wrap {
-  width: 980px;
-  max-width: 980px;
-  margin: 22px auto;
-  padding: 0;
+  max-width: 1140px;
+  margin: 0 auto;
   background: #ffffff;
-  border: 1px solid #cfcbbf;
-  border-top: 4px solid #333333;
+  border: 0;
 }
 
 #header {
   position: relative;
-  padding: 28px 30px 0;
-  border-bottom: 1px solid #c9c9c9;
+  padding: 0 0 22px;
+  border-bottom: 1px solid #e4e2dc;
   text-align: center;
 }
 
 #header-utility {
-  position: absolute;
-  top: 12px;
-  right: 30px;
+  margin: 0 0 12px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
 
 #masthead {
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
 }
 
 .site-title {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 44px;
+  font-size: 48px;
   line-height: 1.2;
   letter-spacing: 0;
 }
@@ -62,57 +57,50 @@ a:hover {
 .masthead-tagline {
   margin: 0;
   color: #555555;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
 }
 
 #nav-wrap {
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
+  padding: 8px;
+  border: 1px solid #e5e2da;
   background: #fafafa;
-  padding: 0;
+  border-radius: 8px;
 }
 
 #nav {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.4;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 #nav li {
-  display: inline;
   margin: 0;
 }
 
 #nav a {
-  display: inline-block;
-  margin: 4px 2px;
-  padding: 7px 11px;
+  margin: 2px;
+  padding: 7px 12px;
   border: 1px solid transparent;
-  color: #0645ad;
-}
-
-#nav li:first-child a {
-  border-left: 0;
+  color: #234b7d;
+  border-radius: 6px;
 }
 
 #nav a:hover {
-  border-color: #dddddd;
-  background: #f0f0f0;
+  border-color: #d7dce5;
+  background: #eef3f8;
   text-decoration: none;
 }
 
 #night-toggle {
   margin: 0;
-  padding: 2px 7px;
-  border: 1px solid #cccccc;
-  background: #ffffff;
-  color: #0645ad;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
   cursor: pointer;
@@ -123,27 +111,14 @@ a:hover {
 }
 
 #main {
-  padding: 30px;
-}
-
-#main:after {
-  display: block;
-  clear: both;
-  content: "";
+  padding: 28px 0 0;
 }
 
 #content {
-  float: left;
-  width: 635px;
-  padding: 0 28px 0 15px;
-  border-right: 1px solid #e2e2e2;
+  padding: 0;
 }
 
 #sidebar {
-  float: right;
-  width: 255px;
-  padding-right: 15px;
-  padding-left: 15px;
   color: #555555;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -151,9 +126,10 @@ a:hover {
 }
 
 .side-section {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   padding: 0;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e7e5df;
+  border-radius: 8px;
 }
 
 .side-section h2 {
@@ -163,11 +139,11 @@ a:hover {
   color: #333333;
   font-size: 14px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .side-section .card-body {
-  padding: 12px;
+  padding: 16px;
   font-size: 13px;
 }
 
@@ -187,7 +163,7 @@ a:hover {
 
 .side-section li {
   margin: 0;
-  padding: 7px 9px;
+  padding: 8px 10px;
   border-bottom: 0;
 }
 
@@ -206,9 +182,11 @@ a:hover {
   float: left;
   width: 64px;
   margin: 0 10px 0 0;
-  padding: 3px;
-  border: 1px solid #dddddd;
+  padding: 0;
+  border: 0;
   background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .side-thumb img {
@@ -228,27 +206,25 @@ a:hover {
 }
 
 .side-search {
-  padding-bottom: 18px;
+  padding-bottom: 0;
+}
+
+.search-box {
+  display: block;
 }
 
 .search-box input {
-  float: left;
-  width: 150px;
-  height: 28px;
-  margin: 0;
-  padding: 4px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 8px;
+  padding: 6px 8px;
   border: 1px solid #cfcfcf;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
 
 .search-box button {
-  float: left;
-  margin: 0 0 0 5px;
-  padding: 4px 8px;
-  border: 1px solid #bdbdbd;
-  background: #eeeeee;
-  color: #555555;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -380,10 +356,12 @@ p {
 }
 
 .feature-panel {
-  margin: 0 0 30px;
+  margin: 0 0 32px;
   padding: 0;
-  border: 1px solid #dddddd;
+  border: 1px solid #e2ded5;
   background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .feature-panel:after {
@@ -394,7 +372,7 @@ p {
 
 .feature-panel h1 {
   margin: 0 0 11px;
-  font-size: 29px;
+  font-size: 32px;
   line-height: 1.18;
 }
 
@@ -418,7 +396,7 @@ p {
 
 .feature-copy {
   min-height: 0;
-  padding: 18px;
+  padding: 24px;
 }
 
 .feature-copy .lead {
@@ -427,36 +405,39 @@ p {
 }
 
 .post-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin-top: 8px;
 }
 
-.post-list li {
-  min-height: 86px;
-  padding: 14px 0;
-  border-bottom: 1px solid #eeeeee;
+.post-list-item {
+  min-height: 0;
 }
 
 .post-list h3 {
   margin: 0 0 2px;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: normal;
 }
 
+.post-card {
+  border: 1px solid #e4e1da;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .post-thumb {
-  float: left;
-  margin: 2px 13px 8px 0;
-  padding: 4px;
-  border: 1px solid #dddddd;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
   background: #ffffff;
 }
 
 .post-thumb img {
   display: block;
-  width: 110px;
-  height: 70px;
+  width: 100%;
+  height: 150px;
   border: 0;
+  object-fit: cover;
 }
 
 .post-list .excerpt {
@@ -468,8 +449,8 @@ p {
   margin: 0;
 }
 
-.blog-list li {
-  min-height: 96px;
+.blog-list .post-thumb img {
+  height: 170px;
 }
 
 .read-more {
@@ -498,9 +479,9 @@ p {
 }
 
 .post-head {
-  margin: 0 0 17px;
-  padding: 0 0 10px;
-  border-bottom: 1px solid #e6e6e6;
+  margin: 0 0 22px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #e6e3dc;
 }
 
 .post-head h1 {
@@ -513,7 +494,7 @@ p {
 }
 
 .post p {
-  max-width: 610px;
+  max-width: 680px;
 }
 
 .post .description {
@@ -535,9 +516,11 @@ p {
 
 .post-image {
   margin: 0 0 24px;
-  padding: 4px;
-  border: 1px solid #dddddd;
+  padding: 0;
+  border: 1px solid #e0ddd6;
   background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .post-image img {
@@ -556,9 +539,9 @@ p {
 }
 
 .post-comments {
-  margin: 30px 0 0;
-  padding: 20px 0 0;
-  border-top: 1px solid #e3e3e3;
+  margin: 36px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid #e3e0d8;
 }
 
 .post-comments h2 {
@@ -576,7 +559,7 @@ p {
 .archive-year {
   margin: 0 0 18px;
   padding: 0 0 7px;
-  border-bottom: 2px solid #d8d8d8;
+  border-bottom: 2px solid #d8d4ca;
   font-size: 26px;
 }
 
@@ -596,11 +579,13 @@ p {
 }
 
 .archive-list li {
-  padding: 8px 12px;
+  padding: 10px 14px;
 }
 
 .topics-index h2 {
-  margin-top: 24px;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
   text-transform: capitalize;
 }
 
@@ -610,7 +595,7 @@ p {
 }
 
 .topics-index ul {
-  margin: 0 0 22px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -621,13 +606,15 @@ p {
 
 .notebook-note {
   margin: 0 0 22px;
-  border: 1px solid #dddddd;
+  border: 1px solid #e0ddd6;
   background: #ffffff;
+  border-radius: 10px;
 }
 
 .notebook-card {
   margin: 0 0 22px;
-  border: 1px solid #dddddd;
+  border: 1px solid #e0ddd6;
+  border-radius: 10px;
 }
 
 .notebook-card .card-title {
@@ -636,12 +623,13 @@ p {
 }
 
 .notebook-links {
-  margin: 12px 0 0;
-  padding-left: 18px;
+  margin: 16px 0 0;
+  padding-left: 0;
 }
 
 .notebook-links li {
-  margin: 0 0 5px;
+  display: inline-block;
+  margin: 0 6px 8px 0;
 }
 
 .notebook-open-placeholder {
@@ -723,8 +711,8 @@ figcaption {
 
 #footer {
   clear: both;
-  padding: 18px 30px 24px;
-  border-top: 1px solid #dddddd;
+  padding: 24px 0 0;
+  border-top: 1px solid #e0ddd6;
   color: #666666;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -1039,11 +1027,9 @@ body.night #night-toggle {
 
 @media screen and (max-width: 980px) {
   #wrap {
-    width: auto;
     margin: 0;
-    padding: 0 18px;
-    border-left: 0;
-    border-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   #header,
@@ -1051,17 +1037,6 @@ body.night #night-toggle {
   #footer {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  #content,
-  #sidebar {
-    float: none;
-    width: auto;
-  }
-
-  #content {
-    padding: 0;
-    border-right: 0;
   }
 
   #sidebar {
