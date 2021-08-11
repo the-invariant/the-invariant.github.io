@@ -4,18 +4,23 @@ title: Home
 ---
 
 <div class="feature-panel card shadow-sm mb-4">
-  <p class="feature-image"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
-  <div class="feature-copy card-body">
-    <h1>Notes from the edge of science and technology.</h1>
-    <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
-       
+  <div class="row g-0 align-items-stretch">
+    <div class="col-lg-5">
+      <p class="feature-image"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
+    </div>
+    <div class="col-lg-7">
+      <div class="feature-copy card-body">
+        <h1>Notes from the edge of science and technology.</h1>
+        <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Recent posts
 
 {% if site.posts.size > 0 %}
-<div class="post-list row g-3">
+<div class="post-list row g-4">
   {% for post in site.posts limit:4 %}
   <article class="post-list-item col-md-6">
     <div class="post-card card h-100 shadow-sm">

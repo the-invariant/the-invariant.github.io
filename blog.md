@@ -7,7 +7,7 @@ permalink: /blog/
 # Blog
 
 {% if site.posts.size > 0 %}
-<div class="post-list blog-list row g-3">
+<div class="post-list blog-list row g-4">
   {% for post in site.posts limit:9 %}
   <article class="post-list-item col-md-6">
     <div class="post-card card h-100 shadow-sm">

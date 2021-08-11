@@ -14,5 +14,5 @@ permalink: /notebooks/
 
 {% include notebook-card.html
   title="Notebook shell"
-  description="Notebook files can be listed here as they are added."
+  description=""
 %}

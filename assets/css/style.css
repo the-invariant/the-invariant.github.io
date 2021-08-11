@@ -26,19 +26,23 @@ a:hover {
 
 #header {
   position: relative;
-  padding: 0 0 22px;
-  border-bottom: 1px solid #e4e2dc;
+  padding: 0;
+  border-bottom: 0;
   text-align: center;
 }
 
+.header-bar {
+  border-bottom: 1px solid #e4e2dc;
+}
+
 #header-utility {
-  margin: 0 0 12px;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
 
 #masthead {
-  margin: 0 auto 20px;
+  margin: 0;
 }
 
 .site-title {
@@ -62,10 +66,9 @@ a:hover {
 }
 
 #nav-wrap {
-  padding: 8px;
-  border: 1px solid #e5e2da;
-  background: #fafafa;
-  border-radius: 8px;
+  overflow-x: auto;
+  border-bottom: 1px solid #e4e2dc;
+  background: transparent;
 }
 
 #nav {
@@ -87,7 +90,7 @@ a:hover {
 
 #nav a {
   margin: 2px;
-  padding: 7px 12px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   color: #234b7d;
   border-radius: 6px;
@@ -126,10 +129,10 @@ a:hover {
 }
 
 .side-section {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   padding: 0;
   border: 1px solid #e7e5df;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .side-section h2 {
@@ -143,7 +146,7 @@ a:hover {
 }
 
 .side-section .card-body {
-  padding: 16px;
+  padding: 18px;
   font-size: 13px;
 }
 
@@ -169,7 +172,7 @@ a:hover {
 
 .recent-posts .recent-post-item {
   min-height: 0;
-  padding: 7px 8px;
+  padding: 10px 0;
 }
 
 .recent-posts .recent-post-item:after {
@@ -281,9 +284,11 @@ a:hover {
 }
 
 .search-result {
-  margin: 0;
-  padding: 14px 0;
-  border-bottom: 1px solid #eeeeee;
+  margin: 0 0 12px;
+  padding: 16px 18px;
+  border: 1px solid #e4e1da;
+  border-radius: 8px;
+  background: #ffffff;
 }
 
 .search-result-title {
@@ -323,7 +328,7 @@ a:hover {
 
 .archive-months li {
   min-height: 0;
-  padding: 6px 8px;
+  padding: 8px 0;
 }
 
 h1,
@@ -356,11 +361,11 @@ p {
 }
 
 .feature-panel {
-  margin: 0 0 32px;
+  margin: 0 0 34px;
   padding: 0;
   border: 1px solid #e2ded5;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -382,21 +387,23 @@ p {
 
 .feature-image {
   float: none;
-  width: auto;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .feature-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 280px;
   border: 0;
+  object-fit: cover;
 }
 
 .feature-copy {
   min-height: 0;
-  padding: 24px;
+  padding: 34px;
 }
 
 .feature-copy .lead {
@@ -420,8 +427,12 @@ p {
 
 .post-card {
   border: 1px solid #e4e1da;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
+}
+
+.post-card .card-body {
+  padding: 20px;
 }
 
 .post-thumb {
@@ -435,7 +446,7 @@ p {
 .post-thumb img {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 155px;
   border: 0;
   object-fit: cover;
 }
@@ -450,7 +461,7 @@ p {
 }
 
 .blog-list .post-thumb img {
-  height: 170px;
+  height: 180px;
 }
 
 .read-more {
@@ -519,7 +530,7 @@ p {
   padding: 0;
   border: 1px solid #e0ddd6;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -582,6 +593,11 @@ p {
   padding: 10px 14px;
 }
 
+.topic-card {
+  border: 1px solid #e4e1da;
+  border-radius: 8px;
+}
+
 .topics-index h2 {
   margin: 0 0 12px;
   padding: 0;
@@ -601,20 +617,20 @@ p {
 }
 
 .topics-index li {
-  padding: 8px 10px;
+  padding: 10px 0;
 }
 
 .notebook-note {
   margin: 0 0 22px;
   border: 1px solid #e0ddd6;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .notebook-card {
   margin: 0 0 22px;
   border: 1px solid #e0ddd6;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .notebook-card .card-title {
@@ -834,6 +850,7 @@ body.night .search-box button,
 body.night .search-page-form,
 body.night .search-page-form input,
 body.night .search-page-form select,
+body.night .search-result,
 body.night .notebook-note,
 body.night .notebook-card,
 body.night .post-image,
@@ -973,6 +990,7 @@ body.night #night-toggle {
   body:not(.light) .search-page-form,
   body:not(.light) .search-page-form input,
   body:not(.light) .search-page-form select,
+  body:not(.light) .search-result,
   body:not(.light) .notebook-note,
   body:not(.light) .notebook-card,
   body:not(.light) .post-image,
@@ -1048,6 +1066,14 @@ body.night #night-toggle {
   #header-utility {
     position: static;
     margin-bottom: 8px;
+  }
+
+  .feature-copy {
+    padding: 22px;
+  }
+
+  .feature-image img {
+    min-height: 210px;
   }
 
   .search-page-form input {

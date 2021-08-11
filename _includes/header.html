@@ -1,12 +1,14 @@
-<header id="header" class="mb-4">
-  <div id="header-utility" class="text-lg-end">
-    <button class="btn btn-outline-secondary btn-sm" type="button" id="night-toggle">Dark Mode</button>
+<header id="header" class="blog-header mb-4">
+  <div class="header-bar row align-items-center pb-3 mb-2">
+    <div id="masthead" class="col-md-8 offset-md-2 text-center">
+      <p class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></p>
+      <p class="masthead-tagline">Thoughts on science, technology, and human nature.</p>
+    </div>
+    <div id="header-utility" class="col-md-2 text-center text-md-end mt-3 mt-md-0">
+      <button class="btn btn-outline-secondary btn-sm" type="button" id="night-toggle">Dark Mode</button>
+    </div>
   </div>
-  <div id="masthead" class="text-center">
-    <p class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></p>
-    <p class="masthead-tagline">Thoughts on science, technology, and human nature.</p>
-  </div>
-  <nav id="nav-wrap" class="navbar navbar-light justify-content-center">
+  <nav id="nav-wrap" class="nav-scroller py-1">
     <ul id="nav" class="nav nav-pills justify-content-center">
       <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a></li>
