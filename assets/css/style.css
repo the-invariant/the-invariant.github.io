@@ -18,9 +18,8 @@ a:hover {
 }
 
 #wrap {
-  max-width: 1140px;
   margin: 0 auto;
-  background: #ffffff;
+  background: transparent;
   border: 0;
 }
 
@@ -114,7 +113,7 @@ a:hover {
 }
 
 #main {
-  padding: 28px 0 0;
+  padding: 0;
 }
 
 #content {
@@ -412,41 +411,39 @@ p {
 }
 
 .post-list {
-  margin-top: 8px;
-}
-
-.post-list-item {
-  min-height: 0;
+  margin-top: 12px;
 }
 
 .post-list h3 {
   margin: 0 0 2px;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: normal;
 }
 
-.post-card {
+.post-preview {
   border: 1px solid #e4e1da;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.post-card .card-body {
+.post-preview .card-body {
   padding: 20px;
 }
 
-.post-thumb {
+.post-preview-image {
   display: block;
+  height: 100%;
   margin: 0;
   padding: 0;
   border: 0;
   background: #ffffff;
 }
 
-.post-thumb img {
+.post-preview-image img {
   display: block;
   width: 100%;
-  height: 155px;
+  height: 100%;
+  min-height: 190px;
   border: 0;
   object-fit: cover;
 }
@@ -460,8 +457,8 @@ p {
   margin: 0;
 }
 
-.blog-list .post-thumb img {
-  height: 180px;
+.post-preview .card-text {
+  margin-bottom: 6px;
 }
 
 .read-more {
@@ -777,11 +774,9 @@ body.night .list-group-item,
 body.night .side-section h2,
 body.night .side-section li,
 body.night .side-thumb,
-body.night .post-thumb,
 body.night #footer,
 body.night h2,
 body.night .post .back,
-body.night .post-list li,
 body.night .feature-panel,
 body.night .feature-image,
 body.night .archive-year,
@@ -829,8 +824,11 @@ body.night .feature-image {
   background: #242424;
 }
 
-body.night .side-thumb,
-body.night .post-thumb {
+body.night .side-thumb {
+  background: #242424;
+}
+
+body.night .post-preview-image {
   background: #242424;
 }
 
@@ -928,11 +926,9 @@ body.night #night-toggle {
   body:not(.light) .side-section h2,
   body:not(.light) .side-section li,
   body:not(.light) .side-thumb,
-  body:not(.light) .post-thumb,
   body:not(.light) #footer,
   body:not(.light) h2,
   body:not(.light) .post .back,
-  body:not(.light) .post-list li,
   body:not(.light) .feature-panel,
   body:not(.light) .feature-image,
   body:not(.light) .archive-year,
@@ -978,7 +974,7 @@ body.night #night-toggle {
 
   body:not(.light) .feature-image,
   body:not(.light) .side-thumb,
-  body:not(.light) .post-thumb,
+  body:not(.light) .post-preview-image,
   body:not(.light) #nav-wrap,
   body:not(.light) #nav a:hover,
   body:not(.light) .navbar-light,
@@ -1046,8 +1042,8 @@ body.night #night-toggle {
 @media screen and (max-width: 980px) {
   #wrap {
     margin: 0;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   #header,
@@ -1074,6 +1070,10 @@ body.night #night-toggle {
 
   .feature-image img {
     min-height: 210px;
+  }
+
+  .post-preview-image img {
+    min-height: 180px;
   }
 
   .search-page-form input {
