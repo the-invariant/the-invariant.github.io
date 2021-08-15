@@ -7,7 +7,7 @@ permalink: /topics/
 # Topics
 
 {% if site.tags.size > 0 %}
-<div class="topics-index row g-3">
+<div class="topics-index row g-3 mx-0">
   {% for tag in site.tags %}
   <section class="col-md-6">
     <div class="topic-card card h-100 shadow-sm">

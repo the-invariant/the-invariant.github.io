@@ -3,19 +3,19 @@ layout: default
 title: Home
 ---
 
-<div class="feature-panel card shadow-sm mb-4">
-  <div class="row g-0 align-items-stretch">
+<section class="feature-lead mb-4">
+  <div class="row align-items-center g-4 mx-0">
     <div class="col-lg-5">
       <p class="feature-image"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
     </div>
     <div class="col-lg-7">
-      <div class="feature-copy card-body">
+      <div class="feature-copy">
         <h1>Notes from the edge of science and technology.</h1>
         <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 ## Recent posts
 
