@@ -124,10 +124,12 @@ a:hover {
 #content {
   min-width: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #sidebar {
   min-width: 0;
+  overflow: hidden;
   color: #555555;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -384,19 +386,12 @@ p {
   font-size: 17px;
 }
 
-.feature-image {
-  float: none;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-image img {
+.feature-lead-image {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
   border: 0;
-  border-radius: 6px;
 }
 
 .feature-copy {
@@ -485,6 +480,11 @@ p {
   color: #777777;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
+}
+
+.post {
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .post-head {
@@ -782,7 +782,7 @@ body.night #footer,
 body.night h2,
 body.night .post .back,
 body.night .feature-lead,
-body.night .feature-image,
+body.night .feature-lead-image,
 body.night .archive-year,
 body.night .archive-list li,
 body.night .post-head,
@@ -824,7 +824,7 @@ body.night #footer {
   color: #bbbbbb;
 }
 
-body.night .feature-image {
+body.night .feature-lead-image {
   background: #242424;
 }
 
@@ -938,7 +938,7 @@ body.night #night-toggle {
   body:not(.light) h2,
   body:not(.light) .post .back,
   body:not(.light) .feature-lead,
-  body:not(.light) .feature-image,
+  body:not(.light) .feature-lead-image,
   body:not(.light) .archive-year,
   body:not(.light) .archive-list li,
   body:not(.light) .post-head,
@@ -980,7 +980,7 @@ body.night #night-toggle {
     color: #bbbbbb;
   }
 
-  body:not(.light) .feature-image,
+  body:not(.light) .feature-lead-image,
   body:not(.light) .side-thumb,
   body:not(.light) .post-preview-image,
   body:not(.light) #nav-wrap,

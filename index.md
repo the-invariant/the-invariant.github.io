@@ -6,7 +6,7 @@ title: Home
 <section class="feature-lead mb-4">
   <div class="row align-items-center g-4 mx-0">
     <div class="col-lg-5">
-      <p class="feature-image"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt=""></p>
+      <img class="img-fluid feature-lead-image" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt="">
     </div>
     <div class="col-lg-7">
       <div class="feature-copy">
