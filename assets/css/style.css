@@ -117,14 +117,15 @@ a:hover {
   text-decoration: underline;
 }
 
-#main {
-  padding: 0;
-}
-
 #content {
   min-width: 0;
-  padding: 0;
   overflow: hidden;
+}
+
+.site-content-row {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #sidebar {
@@ -551,6 +552,10 @@ p {
   margin: 36px 0 0;
   padding: 24px 0 0;
   border-top: 1px solid #e3e0d8;
+}
+
+.post-comments iframe {
+  max-width: 100%;
 }
 
 .post-comments h2 {
