@@ -4,16 +4,12 @@ title: Home
 ---
 
 <section class="feature-lead mb-4">
-  <div class="row align-items-center g-4 mx-0">
-    <div class="col-lg-5">
-      <img class="img-fluid feature-lead-image" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt="">
-    </div>
-    <div class="col-lg-7">
-      <div class="feature-copy">
-        <h1>Notes from the edge of science and technology.</h1>
-        <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
-      </div>
-    </div>
+  <div class="feature-media">
+    <img class="img-fluid feature-lead-image" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt="">
+  </div>
+  <div class="feature-copy">
+    <h1>Notes from the edge of science and technology.</h1>
+    <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
   </div>
 </section>
 

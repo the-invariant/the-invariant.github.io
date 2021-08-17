@@ -377,6 +377,11 @@ p {
   border-bottom: 1px solid #e4e1da;
 }
 
+.feature-media {
+  margin: 0 0 18px;
+  padding: 0;
+}
+
 .feature-lead h1 {
   margin: 0 0 11px;
   font-size: 32px;
@@ -393,11 +398,13 @@ p {
   max-width: 100%;
   height: auto;
   border: 0;
+  border-radius: 0;
 }
 
 .feature-copy {
   min-height: 0;
   padding: 0;
+  max-width: 760px;
 }
 
 .feature-copy .lead {
@@ -1060,7 +1067,6 @@ body.night #night-toggle {
   }
 
   #header,
-  #main,
   #footer {
     padding-left: 0;
     padding-right: 0;
@@ -1082,7 +1088,7 @@ body.night #night-toggle {
   }
 
   .feature-copy {
-    padding: 22px;
+    padding: 0;
   }
 
   .post-preview-image img {
