@@ -1,0 +1,7 @@
+{% assign reading_source = include.post.content | default: content | strip_html %}
+{% assign word_count = reading_source | number_of_words %}
+{% assign reading_minutes = word_count | plus: 199 | divided_by: 200 %}
+{% if reading_minutes < 1 %}
+{% assign reading_minutes = 1 %}
+{% endif %}
+<span class="reading-time">{{ reading_minutes }} min read</span>

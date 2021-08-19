@@ -21,7 +21,7 @@ permalink: /blog/
       {% endif %}
         <div class="card-body">
         <h3 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-        <p class="card-text"><small class="date text-muted">{{ post.date | date: "%Y-%m-%d" }}</small></p>
+        <p class="card-text"><small class="date text-muted">{{ post.date | date: "%Y-%m-%d" }} <span class="meta-sep">·</span> {% include reading-time.html post=post %}</small></p>
         <div class="excerpt">{{ post.excerpt }}</div>
         <p class="read-more"><a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
         </div>

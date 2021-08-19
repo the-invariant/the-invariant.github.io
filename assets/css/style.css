@@ -490,6 +490,15 @@ p {
   font-size: 13px;
 }
 
+.meta-sep {
+  margin: 0 4px;
+  color: #999999;
+}
+
+.reading-time {
+  white-space: nowrap;
+}
+
 .post {
   max-width: 100%;
   overflow: hidden;
@@ -820,6 +829,7 @@ body.night .feature-copy .lead,
 body.night .post .description,
 body.night .post-tags,
 body.night .post-meta,
+body.night .meta-sep,
 body.night .post-list .excerpt,
 body.night .side-date,
 body.night .post-list .date,
@@ -976,6 +986,7 @@ body.night #night-toggle {
   body:not(.light) .post .description,
   body:not(.light) .post-tags,
   body:not(.light) .post-meta,
+  body:not(.light) .meta-sep,
   body:not(.light) .post-list .excerpt,
   body:not(.light) .side-date,
   body:not(.light) .post-list .date,
