@@ -1,20 +1,44 @@
-<div class="notebook-card card shadow-sm">
+{% assign notebook = include.notebook %}
+{% if notebook %}
+<article class="notebook-card card shadow-sm">
   <div class="card-body">
-    <h2 class="card-title">{{ include.title | default: "Notebook entry" }}</h2>
-    {% if include.description %}
-    <p class="card-text">{{ include.description }}</p>
+    <h2 class="card-title"><a href="{{ notebook.url | relative_url }}">{{ notebook.title }}</a></h2>
+    {% if notebook.date or notebook.language or notebook.runtime %}
+    <p class="notebook-meta">
+      {% if notebook.date %}<span>{{ notebook.date | date: "%Y-%m-%d" }}</span>{% endif %}
+      {% if notebook.language %}<span>{{ notebook.language }}</span>{% endif %}
+      {% if notebook.runtime %}<span>{{ notebook.runtime }}</span>{% endif %}
+    </p>
     {% endif %}
-    <ul class="notebook-links list-unstyled">
-      {% if include.related_post %}
-      <li><a class="btn btn-outline-secondary btn-sm" href="{{ include.related_post }}">Related post</a></li>
+    {% if notebook.description %}
+    <p class="card-text notebook-description">{{ notebook.description }}</p>
+    {% endif %}
+    {% if notebook.tags.size > 0 %}
+    <p class="notebook-tags">
+      {% for tag in notebook.tags %}
+      <span class="badge bg-secondary">{{ tag }}</span>
+      {% endfor %}
+    </p>
+    {% endif %}
+    {% if notebook.notebook_file or notebook.github_url or notebook.colab_url or notebook.browser_url %}
+    <div class="notebook-actions">
+      <a class="btn btn-outline-secondary btn-sm" href="{{ notebook.url | relative_url }}">Notebook page</a>
+      {% if notebook.notebook_file %}
+      <a class="btn btn-outline-primary btn-sm" href="{{ notebook.notebook_file | relative_url }}" download>Download Notebook</a>
       {% endif %}
-      {% if include.download %}
-      <li><a class="btn btn-outline-secondary btn-sm" href="{{ include.download }}">Download</a></li>
+      {% if notebook.github_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ notebook.github_url }}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       {% endif %}
-      {% if include.source %}
-      <li><a class="btn btn-outline-secondary btn-sm" href="{{ include.source }}">View source</a></li>
+      {% if notebook.colab_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ notebook.colab_url }}" target="_blank" rel="noopener noreferrer">Open in Colab</a>
       {% endif %}
-      <li><span class="notebook-open-placeholder btn btn-outline-secondary btn-sm disabled">Open in browser</span></li>
-    </ul>
+      {% if notebook.browser_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ notebook.browser_url | relative_url }}">Open in Browser</a>
+      {% endif %}
+    </div>
+    {% else %}
+    <p class="notebook-actions"><a class="btn btn-outline-secondary btn-sm" href="{{ notebook.url | relative_url }}">Notebook page</a></p>
+    {% endif %}
   </div>
-</div>
+</article>
+{% endif %}

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="notebook-page card shadow-sm">
+  <div class="card-body">
+    <header class="notebook-head">
+      <h1>{{ page.title }}</h1>
+      {% if page.date or page.language or page.runtime %}
+      <p class="notebook-meta">
+        {% if page.date %}<span>{{ page.date | date: "%B %d, %Y" }}</span>{% endif %}
+        {% if page.language %}<span>{{ page.language }}</span>{% endif %}
+        {% if page.runtime %}<span>{{ page.runtime }}</span>{% endif %}
+      </p>
+      {% endif %}
+      {% if page.description %}
+      <p class="notebook-description">{{ page.description }}</p>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+      <p class="notebook-tags">
+        {% for tag in page.tags %}
+        <span class="badge bg-secondary">{{ tag }}</span>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </header>
+
+    {% if page.notebook_file or page.github_url or page.colab_url or page.browser_url %}
+    <div class="notebook-actions">
+      {% if page.notebook_file %}
+      <a class="btn btn-outline-primary btn-sm" href="{{ page.notebook_file | relative_url }}" download>Download Notebook</a>
+      {% endif %}
+      {% if page.github_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ page.github_url }}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      {% endif %}
+      {% if page.colab_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ page.colab_url }}" target="_blank" rel="noopener noreferrer">Open in Colab</a>
+      {% endif %}
+      {% if page.browser_url %}
+      <a class="btn btn-outline-secondary btn-sm" href="{{ page.browser_url | relative_url }}">Open in Browser</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="notebook-content">
+      {{ content }}
+    </div>
+  </div>
+</article>

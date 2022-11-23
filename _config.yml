@@ -7,3 +7,15 @@ permalink: /blog/:year/:month/:day/:title/
 highlighter: rouge
 linkedin_url: ""
 twitter_url: ""
+
+collections:
+  notebooks:
+    output: true
+    permalink: /notebooks/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notebooks
+    values:
+      layout: notebook

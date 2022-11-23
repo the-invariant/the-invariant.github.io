@@ -648,11 +648,16 @@ p {
   border-radius: 8px;
 }
 
+.notebook-list {
+  max-width: 100%;
+}
+
 .notebook-card {
   max-width: 100%;
   margin: 0 0 22px;
   border: 1px solid #e0ddd6;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .notebook-card .card-title {
@@ -660,14 +665,66 @@ p {
   font-size: 20px;
 }
 
-.notebook-links {
-  margin: 16px 0 0;
-  padding-left: 0;
+.notebook-page {
+  max-width: 100%;
+  border: 1px solid #e0ddd6;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.notebook-links li {
+.notebook-head {
+  margin: 0 0 22px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid #e6e3dc;
+}
+
+.notebook-head h1 {
+  margin-bottom: 8px;
+}
+
+.notebook-meta {
+  margin: 0 0 10px;
+  color: #777777;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.notebook-meta span {
   display: inline-block;
+  margin: 0 12px 4px 0;
+}
+
+.notebook-description {
+  color: #555555;
+}
+
+.notebook-tags {
+  margin: 0 0 14px;
+}
+
+.notebook-tags .badge {
+  margin: 0 4px 6px 0;
+  font-weight: normal;
+}
+
+.notebook-actions {
+  margin: 16px 0 18px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.notebook-actions .btn {
   margin: 0 6px 8px 0;
+  white-space: normal;
+}
+
+.notebook-content {
+  max-width: 100%;
+}
+
+.notebook-empty {
+  max-width: 100%;
+  color: #777777;
+  font-style: italic;
 }
 
 .notebook-open-placeholder {
@@ -817,8 +874,11 @@ body.night .search-page-form select,
 body.night .search-result,
 body.night .notebook-note,
 body.night .notebook-card,
+body.night .notebook-page,
+body.night .notebook-head,
 body.night .read-more .btn,
-body.night .post .back .btn {
+body.night .post .back .btn,
+body.night .notebook-actions .btn {
   border-color: #555555;
 }
 
@@ -839,6 +899,9 @@ body.night .search-count,
 body.night .search-result-meta,
 body.night .search-result-excerpt,
 body.night .search-empty,
+body.night .notebook-meta,
+body.night .notebook-description,
+body.night .notebook-empty,
 body.night .notebook-open-placeholder,
 body.night figcaption,
 body.night .footer-sep,
@@ -881,6 +944,7 @@ body.night .search-page-form select,
 body.night .search-result,
 body.night .notebook-note,
 body.night .notebook-card,
+body.night .notebook-page,
 body.night .post-image,
 body.night table,
 body.night th,
@@ -888,6 +952,7 @@ body.night td,
 body.night blockquote,
 body.night .read-more .btn,
 body.night .post .back .btn,
+body.night .notebook-actions .btn,
 body.night pre,
 body.night code {
   background: #242424;
@@ -899,6 +964,7 @@ body.night .search-page-form input,
 body.night .search-page-form select,
 body.night .read-more .btn,
 body.night .post .back .btn,
+body.night .notebook-actions .btn,
 body.night th,
 body.night blockquote,
 body.night pre,
@@ -912,11 +978,13 @@ body.night table,
 body.night th,
 body.night td,
 body.night .search-result-tags .badge,
-body.night .topics-index li {
+body.night .topics-index li,
+body.night .notebook-tags .badge {
   border-color: #555555;
 }
 
-body.night .search-result-tags .badge {
+body.night .search-result-tags .badge,
+body.night .notebook-tags .badge {
   background: #555555;
   color: #dddddd;
 }
@@ -974,8 +1042,11 @@ body.night #night-toggle {
   body:not(.light) .search-result,
   body:not(.light) .notebook-note,
   body:not(.light) .notebook-card,
+  body:not(.light) .notebook-page,
+  body:not(.light) .notebook-head,
   body:not(.light) .read-more .btn,
-  body:not(.light) .post .back .btn {
+  body:not(.light) .post .back .btn,
+  body:not(.light) .notebook-actions .btn {
     border-color: #555555;
   }
 
@@ -996,6 +1067,9 @@ body.night #night-toggle {
   body:not(.light) .search-result-meta,
   body:not(.light) .search-result-excerpt,
   body:not(.light) .search-empty,
+  body:not(.light) .notebook-meta,
+  body:not(.light) .notebook-description,
+  body:not(.light) .notebook-empty,
   body:not(.light) .notebook-open-placeholder,
   body:not(.light) figcaption,
   body:not(.light) .footer-sep,
@@ -1020,6 +1094,7 @@ body.night #night-toggle {
   body:not(.light) .search-result,
   body:not(.light) .notebook-note,
   body:not(.light) .notebook-card,
+  body:not(.light) .notebook-page,
   body:not(.light) .post-image,
   body:not(.light) table,
   body:not(.light) th,
@@ -1027,6 +1102,7 @@ body.night #night-toggle {
   body:not(.light) blockquote,
   body:not(.light) .read-more .btn,
   body:not(.light) .post .back .btn,
+  body:not(.light) .notebook-actions .btn,
   body:not(.light) pre,
   body:not(.light) code {
     background: #242424;
@@ -1043,6 +1119,7 @@ body.night #night-toggle {
   body:not(.light) .search-page-form select,
   body:not(.light) .read-more .btn,
   body:not(.light) .post .back .btn,
+  body:not(.light) .notebook-actions .btn,
   body:not(.light) th,
   body:not(.light) blockquote,
   body:not(.light) pre,
@@ -1056,11 +1133,13 @@ body.night #night-toggle {
   body:not(.light) th,
   body:not(.light) td,
   body:not(.light) .search-result-tags .badge,
-  body:not(.light) .topics-index li {
+  body:not(.light) .topics-index li,
+  body:not(.light) .notebook-tags .badge {
     border-color: #555555;
   }
 
-  body:not(.light) .search-result-tags .badge {
+  body:not(.light) .search-result-tags .badge,
+  body:not(.light) .notebook-tags .badge {
     background: #555555;
     color: #dddddd;
   }
