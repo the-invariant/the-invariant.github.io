@@ -1,87 +1,75 @@
 (function () {
   var button = document.getElementById("night-toggle");
   var key = "the-invariant-mode";
+  var root = document.documentElement;
+  var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
-  function getMode() {
+  function getSavedMode() {
     try {
-      return window.localStorage.getItem(key);
+      var value = window.localStorage.getItem(key);
+      return value === "dark" || value === "light" ? value : null;
     } catch (e) {
       return null;
     }
   }
 
-  function setMode(value) {
+  function setSavedMode(value) {
     try {
       window.localStorage.setItem(key, value);
     } catch (e) {
     }
   }
 
-  function hasNight() {
-    return (" " + document.body.className + " ").indexOf(" night ") !== -1;
+  function systemMode() {
+    return media && media.matches ? "dark" : "light";
   }
 
-  function systemDark() {
-    if (!window.matchMedia) {
-      return false;
+  function currentMode() {
+    return root.getAttribute("data-bs-theme") === "dark" ? "dark" : "light";
+  }
+
+  function setMode(value) {
+    var mode = value === "dark" ? "dark" : "light";
+    root.setAttribute("data-bs-theme", mode);
+    updateButton(mode);
+  }
+
+  function updateButton(mode) {
+    if (!button) {
+      return;
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var isDark = mode === "dark";
+    button.innerHTML = isDark ? "Light Mode" : "Dark Mode";
+    button.setAttribute("aria-pressed", isDark ? "true" : "false");
+    button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
   }
 
-  function addNight() {
-    if (!hasNight()) {
-      document.body.className = document.body.className ? document.body.className + " night" : "night";
+  function applyInitialMode() {
+    setMode(getSavedMode() || systemMode());
+  }
+
+  applyInitialMode();
+
+  if (button) {
+    button.onclick = function () {
+      var next = currentMode() === "dark" ? "light" : "dark";
+      setMode(next);
+      setSavedMode(next);
+    };
+  }
+
+  if (media) {
+    var onSystemChange = function () {
+      if (!getSavedMode()) {
+        setMode(systemMode());
+      }
+    };
+
+    if (media.addEventListener) {
+      media.addEventListener("change", onSystemChange);
+    } else if (media.addListener) {
+      media.addListener(onSystemChange);
     }
-
-    removeLight();
   }
-
-  function removeNight() {
-    document.body.className = (" " + document.body.className + " ").replace(" night ", " ");
-    document.body.className = document.body.className.replace(/^\s+|\s+$/g, "");
-  }
-
-  function addLight() {
-    if ((" " + document.body.className + " ").indexOf(" light ") === -1) {
-      document.body.className = document.body.className ? document.body.className + " light" : "light";
-    }
-  }
-
-  function removeLight() {
-    document.body.className = (" " + document.body.className + " ").replace(" light ", " ");
-    document.body.className = document.body.className.replace(/^\s+|\s+$/g, "");
-  }
-
-  function updateButton() {
-    if (button) {
-      button.innerHTML = hasNight() ? "Light Mode" : "Dark Mode";
-    }
-  }
-
-  if (getMode() === "dark" || (!getMode() && systemDark())) {
-    addNight();
-  } else if (getMode() === "light") {
-    removeNight();
-    addLight();
-  }
-
-  updateButton();
-
-  if (!button) {
-    return;
-  }
-
-  button.onclick = function () {
-    if (!hasNight()) {
-      addNight();
-      setMode("dark");
-    } else {
-      removeNight();
-      addLight();
-      setMode("light");
-    }
-
-    updateButton();
-  };
 }());

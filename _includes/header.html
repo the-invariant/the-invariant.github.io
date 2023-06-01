@@ -1,7 +1,7 @@
 <header id="header" class="blog-header mb-4">
   <div class="header-bar pb-3 mb-2">
     <div id="header-utility">
-      <button class="btn btn-outline-secondary btn-sm" type="button" id="night-toggle">Dark Mode</button>
+      <button class="btn btn-outline-secondary btn-sm" type="button" id="night-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark Mode</button>
     </div>
     <div id="masthead" class="text-center">
       <p class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></p>
@@ -10,13 +10,13 @@
   </div>
   <nav id="nav-wrap" class="nav-scroller py-1">
     <ul id="nav" class="nav nav-pills justify-content-center">
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/archive/">Archive</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/topics/">Topics</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/notebooks/">Notebooks</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/search/">Search</a></li>
-      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/about/">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog/"{% if page.url == "/blog/" %} aria-current="page"{% endif %}>Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/archive/"{% if page.url == "/archive/" %} aria-current="page"{% endif %}>Archive</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/topics/"{% if page.url == "/topics/" %} aria-current="page"{% endif %}>Topics</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/notebooks/"{% if page.url == "/notebooks/" %} aria-current="page"{% endif %}>Notebooks</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/search/"{% if page.url == "/search/" %} aria-current="page"{% endif %}>Search</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
     </ul>
   </nav>
 </header>
