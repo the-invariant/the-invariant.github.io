@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "The Name Above the Door"
-display_title: "The Name Above the Door"
+title: "A Name Above the Door"
+author: Chukwuka Orefo
+display_title: "A Name Above the Door"
 date: 2026-07-10
 categories:
 - Website
@@ -11,7 +12,7 @@ tags:
 - website
 - theinvariant.uk
 description: "What changes when the work is given a home of its own?"
-image: /assets/images/posts/2026-07-10-the-name-above-the-door/newname.jpg
+image: /assets/images/posts/2026-07-10-a-name-above-the-door/newname.jpg
 ---
 
 The Invariant now has an address of its own.
