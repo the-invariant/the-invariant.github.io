@@ -3,9 +3,12 @@ layout: default
 title: Topics
 permalink: /topics/
 description: "Browse the writings on The Invariant by subject, idea, and recurring theme."
+hero_title: Topics
+hero_text: Browse the writings on The Invariant by subject, idea, and recurring theme.
+hero_image: /assets/images/site/heroes/topics.jpg
 ---
 
-# Topics
+{% include page-hero.html %}
 
 {% if site.tags.size > 0 %}
 <div class="topics-index row g-3 mx-0">

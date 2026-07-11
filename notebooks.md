@@ -3,15 +3,12 @@ layout: default
 title: Notebooks
 permalink: /notebooks/
 description: "Code notes, worked examples, and small experiments from The Invariant."
+hero_title: Notebooks
+hero_text: Code notes, worked examples, and small experiments from The Invariant.
+hero_image: /assets/images/site/heroes/notebooks.jpg
 ---
 
-# Notebooks
-
-<div class="notebook-note card shadow-sm">
-  <div class="card-body">
-    <p>Code notes, worked examples, and small experiments from The Invariant.</p>
-  </div>
-</div>
+{% include page-hero.html %}
 
 {% assign notebooks = site.notebooks | sort: "date" | reverse %}
 {% if notebooks.size > 0 %}

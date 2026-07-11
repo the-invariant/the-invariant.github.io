@@ -3,9 +3,12 @@ layout: default
 title: Archive
 permalink: /archive/
 description: "The complete archive of writing published on The Invariant, arranged by year and month."
+hero_title: Archive
+hero_text: The complete archive of writing published on The Invariant, arranged by year and month.
+hero_image: /assets/images/site/heroes/archive.jpg
 ---
 
-# Archive
+{% include page-hero.html %}
 
 {% if site.posts.size > 0 %}
 {% assign last_year = "" %}
