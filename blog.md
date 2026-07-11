@@ -3,9 +3,12 @@ layout: default
 title: Blog
 permalink: /blog/
 description: "Essays and notes on science, technology, machines, minds, and the questions that sit between them."
+hero_title: Blog
+hero_text: Essays and notes on science, technology, machines, minds, and the questions that sit between them.
+hero_image: /assets/images/site/heroes/blog.jpg
 ---
 
-# Blog
+{% include page-hero.html %}
 
 {% if site.posts.size > 0 %}
 <div class="post-list blog-list">

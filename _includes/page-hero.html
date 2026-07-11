@@ -1,0 +1,20 @@
+{% assign hero_title = page.hero_title | default: page.title %}
+{% if page.hero_text == nil %}
+  {% assign hero_text = page.description %}
+{% else %}
+  {% assign hero_text = page.hero_text %}
+{% endif %}
+{% assign hero_image = page.hero_image | default: "/assets/images/site/heroes/home.jpg" %}
+{% assign hero_alt = page.hero_alt | default: "" %}
+
+<section class="page-hero">
+  <div class="page-hero-media">
+    <img class="page-hero-image" src="{{ hero_image | relative_url }}" alt="{{ hero_alt | escape }}">
+  </div>
+  <div class="page-hero-copy">
+    <h1>{{ hero_title }}</h1>
+    {% if hero_text and hero_text != "" %}
+    <p class="lead">{{ hero_text }}</p>
+    {% endif %}
+  </div>
+</section>

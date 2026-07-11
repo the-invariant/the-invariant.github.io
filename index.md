@@ -2,16 +2,12 @@
 layout: default
 title: Home
 description: "Thoughts on science, technology, and human nature."
+hero_title: Notes from the edge of science, technology, and human nature.
+hero_text: ""
+hero_image: /assets/images/site/heroes/home.jpg
 ---
 
-<section class="feature-lead mb-4">
-  <div class="feature-media">
-    <img class="img-fluid feature-lead-image" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt="">
-  </div>
-  <div class="feature-copy">
-    <h1>Notes from the edge of science, technology, and human nature.</h1>
-  </div>
-</section>
+{% include page-hero.html %}
 
 ## Recent posts
 

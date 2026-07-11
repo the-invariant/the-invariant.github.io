@@ -6,11 +6,12 @@ description: "Search the essays, pages, and notes published on The Invariant."
 robots: "noindex, follow"
 search_exclude: true
 sitemap: false
+hero_title: Search
+hero_text: Search the essays, pages, and notes published on The Invariant.
+hero_image: /assets/images/site/heroes/search.jpg
 ---
 
-# Search
-
-Search the essays, pages, and notes published on The Invariant.
+{% include page-hero.html %}
 
 <form id="search-form" class="search-page-form card shadow-sm" action="{{ site.baseurl }}/search/" method="get">
   <div class="row mx-0">
