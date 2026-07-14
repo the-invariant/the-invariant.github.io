@@ -7,6 +7,4 @@ description: "The Invariant and the connections it follows across science, techn
 
 # About
 
-The Invariant follows the connections across science, technology, minds, and machines.
-
-Essays and notes on science, technology, machines, minds, and the questions that sit between them.
+The Invariant is a collection of essays and notes following the connections across science, technology, minds, machines, and human nature.

@@ -9,8 +9,7 @@ description: "Thoughts on science, technology, and human nature."
     <img class="img-fluid feature-lead-image" src="{{ site.baseurl }}/assets/images/site/feature.jpg" alt="">
   </div>
   <div class="feature-copy">
-    <h1>Notes from the edge of science and technology.</h1>
-    <p class="lead">Thoughts on science, technology, and human nature.</p>
+    <p class="lead">Notes from the edge of science, technology, and human nature.</p>
   </div>
 </section>
 
