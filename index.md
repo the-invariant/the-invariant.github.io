@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: "Thoughts on science, technology, and human nature."
 ---
 
 <section class="feature-lead mb-4">
@@ -9,7 +10,7 @@ title: Home
   </div>
   <div class="feature-copy">
     <h1>Notes from the edge of science and technology.</h1>
-    <p class="lead">Thoughts on machines, minds, bodies, stories, and the ideas that keep returning.</p>
+    <p class="lead">Thoughts on science, technology, and human nature.</p>
   </div>
 </section>
 

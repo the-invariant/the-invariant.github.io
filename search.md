@@ -2,11 +2,15 @@
 layout: default
 title: Search
 permalink: /search/
+description: "Search the essays, pages, and notes published on The Invariant."
+robots: "noindex, follow"
+search_exclude: true
+sitemap: false
 ---
 
 # Search
 
-Search runs in the browser.
+Search the essays, pages, and notes published on The Invariant.
 
 <form id="search-form" class="search-page-form card shadow-sm" action="{{ site.baseurl }}/search/" method="get">
   <div class="row mx-0">

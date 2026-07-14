@@ -2,13 +2,14 @@
 layout: default
 title: Notebooks
 permalink: /notebooks/
+description: "Code notes, worked examples, and small experiments from The Invariant."
 ---
 
 # Notebooks
 
 <div class="notebook-note card shadow-sm">
   <div class="card-body">
-    <p>A place for code notes, worked examples, and small experiments.</p>
+    <p>Code notes, worked examples, and small experiments from The Invariant.</p>
   </div>
 </div>
 

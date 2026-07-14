@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 permalink: /blog/
+description: "Essays and notes on science, technology, machines, minds, and the questions that sit between them."
 ---
 
 # Blog

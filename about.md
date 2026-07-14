@@ -2,10 +2,11 @@
 layout: default
 title: About
 permalink: /about/
+description: "The Invariant and the connections it follows across science, technology, minds, and machines."
 ---
 
 # About
 
-The Invariant is a place to think through ideas around science, technology, minds, bodies, machines and intelligence.
+The Invariant follows the connections across science, technology, minds, and machines.
 
-watch me connect the dots...
+Essays and notes on science, technology, machines, minds, and the questions that sit between them.

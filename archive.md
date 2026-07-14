@@ -2,6 +2,7 @@
 layout: default
 title: Archive
 permalink: /archive/
+description: "The complete archive of writing published on The Invariant, arranged by year and month."
 ---
 
 # Archive

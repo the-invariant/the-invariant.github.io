@@ -2,6 +2,7 @@
 layout: default
 title: Topics
 permalink: /topics/
+description: "Browse the writings on The Invariant by subject, idea, and recurring theme."
 ---
 
 # Topics

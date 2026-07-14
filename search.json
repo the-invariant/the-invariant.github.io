@@ -1,6 +1,8 @@
 ---
 layout: null
 permalink: /search.json
+search_exclude: true
+sitemap: false
 ---
 [
 {% assign first = true %}
@@ -19,7 +21,7 @@ permalink: /search.json
   }
 {% endfor %}
 {% for item in site.pages %}
-{% if item.title and item.url != "/search/" and item.url != "/search.json" %}
+{% if item.title and item.url != "/search.json" and item.search_exclude != true %}
 {% unless first %},{% endunless %}
 {% assign first = false %}
   {
