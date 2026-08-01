@@ -45,12 +45,9 @@
       <h2 class="card-title">Archive</h2>
       {% if site.posts.size > 0 %}
       <ul class="archive-months list-group list-group-flush">
-        {% for post in site.posts %}
-        {% capture this_month %}{{ post.date | date: "%b %Y" }}{% endcapture %}
-        {% if this_month != last_month %}
-        <li class="list-group-item"><a href="{{ site.baseurl }}/archive/">{{ this_month }}</a></li>
-        {% assign last_month = this_month %}
-        {% endif %}
+        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% for year in posts_by_year %}
+        <li class="list-group-item"><a href="{{ site.baseurl }}/archive/#{{ year.name }}">{{ year.name }} ({{ year.items.size }})</a></li>
         {% endfor %}
       </ul>
       {% else %}

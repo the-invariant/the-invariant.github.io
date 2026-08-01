@@ -647,30 +647,87 @@ p {
   font-size: 12px;
 }
 
-.archive-year {
-  margin: 0 0 18px;
-  padding: 0 0 7px;
-  border-bottom: 2px solid #d8d4ca;
-  font-size: 26px;
+.archive-tree {
+  margin: 0;
+  border-top: 1px solid #d8d4ca;
 }
 
-.archive-month {
-  margin: 25px 0 7px;
-  padding: 0 0 4px;
-  border-bottom: 0;
+details.archive-year {
+  margin: 0;
+  border-bottom: 1px solid #d8d4ca;
+  scroll-margin-top: 16px;
+}
+
+details.archive-year > summary,
+details.archive-month > summary {
+  cursor: pointer;
+}
+
+details.archive-year > summary {
+  padding: 10px 8px;
+  font-size: 24px;
+}
+
+details.archive-year > summary:hover,
+details.archive-month > summary:hover {
+  background: #f5f3ee;
+}
+
+details.archive-year > summary:focus-visible,
+details.archive-month > summary:focus-visible {
+  outline: 3px solid #7da7d9;
+  outline-offset: 2px;
+}
+
+.archive-year-content {
+  padding: 0 8px 8px 24px;
+}
+
+details.archive-month {
+  margin: 0;
+  border-top: 1px solid #e4e1da;
+}
+
+details.archive-month > summary {
+  padding: 8px 6px;
   color: #333333;
   font-size: 18px;
   font-weight: bold;
 }
 
+.archive-summary-label {
+  margin-left: 4px;
+}
+
+.archive-count {
+  float: right;
+  margin: 5px 4px 0 16px;
+  color: #777777;
+  font-size: 13px;
+  font-weight: normal;
+}
+
 .archive-list {
-  margin: 0 0 22px;
-  padding: 0;
+  margin: 0 0 8px 22px;
+  padding: 0 6px;
   list-style: none;
 }
 
 .archive-list li {
-  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #ece9e2;
+}
+
+.archive-list li:last-child {
+  border-bottom: 0;
+}
+
+.archive-list time {
+  color: #777777;
+  font-size: 13px;
 }
 
 .topic-card {
@@ -1008,6 +1065,21 @@ figcaption {
   color: #dddddd;
 }
 
+[data-bs-theme="dark"] .archive-tree,
+[data-bs-theme="dark"] details.archive-month {
+  border-color: #555555;
+}
+
+[data-bs-theme="dark"] details.archive-year > summary:hover,
+[data-bs-theme="dark"] details.archive-month > summary:hover {
+  background: #333333;
+}
+
+[data-bs-theme="dark"] .archive-count,
+[data-bs-theme="dark"] .archive-list time {
+  color: #aaaaaa;
+}
+
 [data-bs-theme="dark"] .search-box input,
 [data-bs-theme="dark"] .search-box button,
 [data-bs-theme="dark"] .search-page-form input,
@@ -1066,6 +1138,18 @@ figcaption {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #e2e2e2;
+  }
+
+  .archive-year-content {
+    padding-left: 16px;
+  }
+
+  .archive-list {
+    margin-left: 12px;
+  }
+
+  .archive-list li {
+    grid-template-columns: 88px minmax(0, 1fr);
   }
 
   #header-utility {

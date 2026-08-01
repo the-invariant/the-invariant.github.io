@@ -2,39 +2,53 @@
 layout: default
 title: Archive
 permalink: /archive/
-description: "The complete archive of writing published on The Invariant, arranged by year and month."
+description: "The complete archive of writing published on The Invariant. Select a year, then a month, to view its posts."
 hero_title: Archive
-hero_text: The complete archive of writing published on The Invariant, arranged by year and month.
+hero_text: The complete archive of writing published on The Invariant. Select a year, then a month, to view its posts.
 hero_image: /assets/images/site/heroes/archive.jpg
 ---
 
 {% include page-hero.html %}
 
 {% if site.posts.size > 0 %}
-{% assign last_year = "" %}
-{% assign last_month = "" %}
-  {% for post in site.posts %}
-  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
-  {% if this_year != last_year %}
-  {% if last_month != "" %}
-</ul>
-  {% endif %}
-  <h2 class="archive-year">{{ this_year }}</h2>
-  {% assign last_year = this_year %}
-  {% assign last_month = "" %}
-  {% endif %}
-  {% if this_month != last_month %}
-  {% if last_month != "" %}
-</ul>
-  {% endif %}
-  <h3 class="archive-month">{{ this_month }}</h3>
-<ul class="archive-list list-group">
-  {% assign last_month = this_month %}
-  {% endif %}
-  <li class="list-group-item"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+<div class="archive-tree">
+  {% for year in posts_by_year %}
+  <details class="archive-year" id="{{ year.name }}">
+    <summary>
+      <span class="archive-summary-label">{{ year.name }}</span>
+      <span class="archive-count">{{ year.items.size }} {% if year.items.size == 1 %}post{% else %}posts{% endif %}</span>
+    </summary>
+    {% assign months = year.items | group_by_exp: "post", "post.date | date: '%m'" %}
+    <div class="archive-year-content">
+      {% for month in months %}
+      <details class="archive-month">
+        <summary>
+          <span class="archive-summary-label">{{ month.items.first.date | date: "%B" }}</span>
+          <span class="archive-count">{{ month.items.size }} {% if month.items.size == 1 %}post{% else %}posts{% endif %}</span>
+        </summary>
+        <ul class="archive-list">
+          {% for post in month.items %}
+          <li>
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B" }}</time>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </div>
+  </details>
   {% endfor %}
-</ul>
+</div>
 {% else %}
 <p>No posts yet.</p>
 {% endif %}
+
+<script>
+  (function () {
+    if (!window.location.hash) return;
+    var year = document.getElementById(window.location.hash.slice(1));
+    if (year && year.matches("details.archive-year")) year.open = true;
+  }());
+</script>
